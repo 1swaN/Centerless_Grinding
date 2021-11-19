@@ -30,7 +30,6 @@ namespace bescentovoe_shlifovanie
         private void InitializeComponent()
         {
             this.output_text = new System.Windows.Forms.TextBox();
-            this.count_button = new System.Windows.Forms.Button();
             this.exit_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -42,17 +41,6 @@ namespace bescentovoe_shlifovanie
             this.output_text.Name = "output_text";
             this.output_text.Size = new System.Drawing.Size(955, 517);
             this.output_text.TabIndex = 0;
-            // 
-            // count_button
-            // 
-            this.count_button.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.count_button.Location = new System.Drawing.Point(789, 539);
-            this.count_button.Name = "count_button";
-            this.count_button.Size = new System.Drawing.Size(89, 38);
-            this.count_button.TabIndex = 1;
-            this.count_button.Text = "Рассчитать";
-            this.count_button.UseVisualStyleBackColor = true;
-            this.count_button.Click += new System.EventHandler(this.count_button_Click);
             // 
             // exit_button
             // 
@@ -71,7 +59,6 @@ namespace bescentovoe_shlifovanie
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 585);
             this.Controls.Add(this.exit_button);
-            this.Controls.Add(this.count_button);
             this.Controls.Add(this.output_text);
             this.Name = "Form2";
             this.Text = "Расчеты";
@@ -83,7 +70,6 @@ namespace bescentovoe_shlifovanie
         #endregion
 
         private System.Windows.Forms.TextBox output_text;
-        private System.Windows.Forms.Button count_button;
         private System.Windows.Forms.Button exit_button;
     }
 }

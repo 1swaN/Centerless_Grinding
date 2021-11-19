@@ -192,9 +192,9 @@ namespace bescentovoe_shlifovanie
             this.label10.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label10.Location = new System.Drawing.Point(19, 294);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(272, 16);
+            this.label10.Size = new System.Drawing.Size(279, 16);
             this.label10.TabIndex = 9;
-            this.label10.Text = "Диаметр зерен шлифовального круга, мм:";
+            this.label10.Text = "Диаметр зерен шлифовального круга, мкм:";
             // 
             // label11
             // 
@@ -312,9 +312,9 @@ namespace bescentovoe_shlifovanie
             this.label23.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label23.Location = new System.Drawing.Point(22, 551);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(481, 16);
+            this.label23.Size = new System.Drawing.Size(488, 16);
             this.label23.TabIndex = 22;
-            this.label23.Text = "Радиус округления вершин абразивных зерен шлифовального круга Rз, мм";
+            this.label23.Text = "Радиус округления вершин абразивных зерен шлифовального круга Rз, мкм";
             // 
             // label24
             // 

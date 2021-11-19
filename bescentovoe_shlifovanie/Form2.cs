@@ -15,22 +15,23 @@ namespace bescentovoe_shlifovanie
         public Form2()
         {
             InitializeComponent();
+            Counting(); //перенес сюда, чтобы расчеты открывались мгновенно при запуске Form 2. Кнопка пуска более не целесообразна
         }
        
         public void Counting()
         {
             //перевод мкм в мм
-            EnteredData.R3 = EnteredData.R3 * 0.001;
-            EnteredData.d01 = EnteredData.d01 * 0.001;
-            EnteredData.d02 = EnteredData.d02 * 0.001;
-            EnteredData.d03 = EnteredData.d03 * 0.001;
-            EnteredData.d04 = EnteredData.d04 * 0.001;
-            EnteredData.Ra = EnteredData.Ra * 0.001;
+            EnteredData.R3 *= 0.001;
+            EnteredData.d01 *= 0.001;
+            EnteredData.d02 *= 0.001;
+            EnteredData.d03 *= 0.001;
+            EnteredData.d04 *= 0.001;
+            EnteredData.Ra *= 0.001;
 
             //Расчеты
             output_text.Text += $"Присваиваем дробной части отношения b/c величину {EnteredData.b_c}" + Environment.NewLine;
 
-            EnteredData.Dv = EnteredData.Dv + 0.1;
+            EnteredData.Dv += 0.1;
             output_text.Text += $"Задаем рациональное значение диаметра ведущего круга для правки в размере {EnteredData.Dv}" + Environment.NewLine;
 
             EnteredData.h = Math.Round(0.5 * EnteredData.k * (EnteredData.Dv + EnteredData.d) * Math.Sin(Math.Atan(EnteredData.f1)), MidpointRounding.AwayFromZero);
@@ -52,7 +53,7 @@ namespace bescentovoe_shlifovanie
             // пока условие истинно - цикл будет обрабатывать блок кода do
             do
             {
-                EnteredData.Alpha = 0.9 * EnteredData.Alpha;
+                EnteredData.Alpha *= 0.9;
 
                 EnteredData.h1 = EnteredData.h - ((EnteredData.d3 - EnteredData.d) / 2) * (1 - Math.Sin(EnteredData.Alpha));
 
@@ -76,7 +77,7 @@ namespace bescentovoe_shlifovanie
 
                 do
                 {
-                    EnteredData.delta_rb = EnteredData.delta_rb * 0.9;
+                    EnteredData.delta_rb *= 0.9;
 
                     for (int i = 1; i < EnteredData.n; i++)
                     {
@@ -84,202 +85,121 @@ namespace bescentovoe_shlifovanie
                     }
                 } while (EnteredData.delta_E <= EnteredData.delta_KR);
                 output_text.Text += $"Конечная cуммарная погрешность формы обработанной детали (отклонение круглости) равна {EnteredData.delta_E}" + Environment.NewLine;
-
-
-                //if (EnteredData.delta_E <= EnteredData.delta_KR)
-                //{
-                //    output_text.Font = new System.Drawing.Font(output_text.Font.FontFamily, Font.Size, FontStyle.Bold);
-                //    output_text.Text += $"Величина превышения центра заготовки равна {EnteredData.h}" + Environment.NewLine;
-                //    output_text.Text += $"Рациональное значение врезной подачи равно {EnteredData.Svr}" + Environment.NewLine;
-                //    output_text.Text += $"Задаем рациональное значение диаметра ведущего круга для правки в размере {EnteredData.Dv}" + Environment.NewLine;
-                //    output_text.Text += $"Угол скоса опорного ножа {EnteredData.Alpha}" + Environment.NewLine;
-                //}
-                //else
-                //{
-                //    EnteredData.delta_rb = EnteredData.delta_rb * 0.9;
-
-                //    for (int i = 1; i < EnteredData.n; i++)
-                //    {
-                //        EnteredData.delta_E += (1 - EnteredData.b_c) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3);
-                //    }
-                //    output_text.Text += $"Суммарная погрешность формы обработанной детали (отклонение круглости) равно {EnteredData.delta_E}" + Environment.NewLine;
-                //}
             }
+
+
             else if (EnteredData.Sfera)
             {
                 EnteredData.N_min = Math.Ceiling((EnteredData.kn * Math.PI * EnteredData.d) / (4 * EnteredData.R3)); //округление ТОЛЬКО в большую сторону. При надобности заменить на Math.Round
-                output_text.Text += $"Минимально необходимое число оборотов заготовки для обработки всей поверхности сферы = {EnteredData.N_min}";
+                //output_text.Text += $"Минимально необходимое число оборотов заготовки для обработки всей поверхности сферы = {EnteredData.N_min}" + Environment.NewLine;
 
                 EnteredData.delta_E = ((1 - EnteredData.b_c) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3)) * EnteredData.N_min;
 
-                //do
-                //{
-                //    EnteredData.delta_rb = EnteredData.delta_rb * 0.9;
-
-                //    EnteredData.delta_E = (1 - EnteredData.b_c) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3) * EnteredData.N_min;
-
-                //} while (EnteredData.delta_E <= EnteredData.delta_SF);
-                //output_text.Text += $"Конечная cуммарная погрешность формы обработанной детали (отклонение круглости) после пересчета равна {EnteredData.delta_E}" + Environment.NewLine;
-
-                if (EnteredData.delta_E <= EnteredData.delta_SF)
-                {
-
-                    output_text.Text += $"Величина превышения центра заготовки равна {EnteredData.h}" + Environment.NewLine;
-                    output_text.Text += $"Рациональное значение врезной подачи равно {EnteredData.Svr}" + Environment.NewLine;
-                    output_text.Text += $"Задаем рациональное значение диаметра ведущего круга для правки в размере {EnteredData.Dv}" + Environment.NewLine;
-                    output_text.Text += $"Угол скоса опорного ножа {EnteredData.Alpha}" + Environment.NewLine;
-                }
-                else
+                while (EnteredData.delta_E > EnteredData.delta_SF)
                 {
                     EnteredData.delta_rb = EnteredData.delta_rb * 0.9;
 
                     EnteredData.delta_E = ((1 - EnteredData.b_c) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3)) * EnteredData.N_min;
-                    output_text.Text += $"Суммарная погрешность формы обработанной детали (отклонение круглости) равно {EnteredData.delta_E}" + Environment.NewLine;
-                    
                 }
+                //output_text.Text += $"Суммарная погрешность формы обработанной детали (отклонение круглости) равно {EnteredData.delta_E}" + Environment.NewLine;
 
 
                 EnteredData.An = Math.Round(1 + 2 * (EnteredData.N_min - 1), MidpointRounding.AwayFromZero);
-                output_text.Text += $"Нужный член ряда, определяющего число пересечений кольцевых лысок при целом значении n_min равен {EnteredData.An}";
+                //output_text.Text += $"Нужный член ряда, определяющего число пересечений кольцевых лысок при целом значении n_min равен {EnteredData.An}" + Environment.NewLine;
 
                 EnteredData.Sn = (EnteredData.N_min / 2) * (1 + EnteredData.An);
-                output_text.Text += $"Общее число площадок пересечения кольцевых лысок равно {EnteredData.Sn}";
+                //output_text.Text += $"Общее число площадок пересечения кольцевых лысок равно {EnteredData.Sn}" + Environment.NewLine;
 
                 EnteredData.N__min = EnteredData.kn * Math.PI * EnteredData.d * ((EnteredData.Sn * EnteredData.R3) / (4 * (Math.Pow(EnteredData.R3, 2)) * EnteredData.Sn * (Math.Pow(EnteredData.d, 2)) * Math.PI));
-                output_text.Text += $"Минимальное число лысок, суммарная ширина которых достаточна для полного покрытия всей сферы, равна {EnteredData.N__min}";
+                //output_text.Text += $"Минимальное число лысок, суммарная ширина которых достаточна для полного покрытия всей сферы, равна {EnteredData.N__min}" + Environment.NewLine;
 
                 EnteredData.Zl = Math.Round(EnteredData.Sn * ((2 * EnteredData.R3) / EnteredData.d), MidpointRounding.AwayFromZero);
-                output_text.Text += $"Количество волн в произвольном сечении сферы (гармоника), равно: {EnteredData.Zl}";
+                //output_text.Text += $"Количество волн в произвольном сечении сферы (гармоника), равно: {EnteredData.Zl}" + Environment.NewLine;
 
                 EnteredData.Lw = (Math.PI * EnteredData.d) / EnteredData.Zl;
-                output_text.Text += $"Средняя длина шага волн равна {EnteredData.Lw}";
+                //output_text.Text += $"Средняя длина шага волн равна {EnteredData.Lw}" + Environment.NewLine;
 
                 EnteredData.Wz = 0.5 * (EnteredData.d - Math.Sqrt(Math.Pow(EnteredData.d, 2) - Math.Pow(EnteredData.Lw, 2)));
-                output_text.Text += $"Высота волн = {EnteredData.Wz}";
+                //output_text.Text += $"Высота волн = {EnteredData.Wz}" + Environment.NewLine;
 
                 do
                 {
-                    EnteredData.R3 = 0.9 * EnteredData.R3;
+                    EnteredData.R3 *= 0.9;
 
                     EnteredData.N_min = Math.Ceiling((EnteredData.kn * Math.PI * EnteredData.d) / (4 * EnteredData.R3)); //округление ТОЛЬКО в большую сторону. При надобности заменить на Math.Round
-                    output_text.Text += $"Минимально необходимое число оборотов заготовки для обработки всей поверхности сферы = {EnteredData.N_min}";
+                    //output_text.Text += $"Минимально необходимое число оборотов заготовки для обработки всей поверхности сферы = {EnteredData.N_min}" + Environment.NewLine;
 
                     EnteredData.delta_E = (1 - EnteredData.b_c) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3) * EnteredData.N_min;
 
                     do
                     {
-                        EnteredData.delta_rb = EnteredData.delta_rb * 0.9;
+                        EnteredData.delta_rb *= 0.9;
 
                         EnteredData.delta_E = (1 - EnteredData.b_c) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3) * EnteredData.N_min;
                         
-                    } while (EnteredData.delta_E <= EnteredData.delta_SF);
-                    output_text.Text += $"Конечная cуммарная погрешность формы обработанной детали (отклонение круглости) после пересчета равна {EnteredData.delta_E}" + Environment.NewLine;
+                    } while (EnteredData.delta_E > EnteredData.delta_SF);
+                    //output_text.Text += $"Конечная cуммарная погрешность формы обработанной детали (отклонение круглости) после пересчета равна {EnteredData.delta_E}" + Environment.NewLine;
 
                     EnteredData.An = Math.Round(1 + 2 * (EnteredData.N_min - 1), MidpointRounding.AwayFromZero);
-                    output_text.Text += $"Нужный член ряда, определяющего число пересечений кольцевых лысок при целом значении n_min равен {EnteredData.An}" + Environment.NewLine;
+                    //output_text.Text += $"Нужный член ряда, определяющего число пересечений кольцевых лысок при целом значении n_min равен {EnteredData.An}" + Environment.NewLine;
 
                     EnteredData.Sn = (EnteredData.N_min / 2) * (1 + EnteredData.An);
-                    output_text.Text += $"Общее число площадок пересечения кольцевых лысок равно {EnteredData.Sn}" + Environment.NewLine;
+                    //output_text.Text += $"Общее число площадок пересечения кольцевых лысок равно {EnteredData.Sn}" + Environment.NewLine;
 
                     EnteredData.N__min = EnteredData.kn * Math.PI * EnteredData.d * ((EnteredData.Sn * EnteredData.R3) / (4 * (Math.Pow(EnteredData.R3, 2)) * EnteredData.Sn * (Math.Pow(EnteredData.d, 2)) * Math.PI));
-                    output_text.Text += $"Минимальное число лысок, суммарная ширина которых достаточна для полного покрытия всей сферы, равна {EnteredData.N__min}" + Environment.NewLine;
+                    //output_text.Text += $"Минимальное число лысок, суммарная ширина которых достаточна для полного покрытия всей сферы, равна {EnteredData.N__min}" + Environment.NewLine;
 
-                    EnteredData.Zl = Math.Round(EnteredData.Svr * ((2 * EnteredData.R3) / EnteredData.d), MidpointRounding.AwayFromZero); // проверить формулу: Svr или нет????????
-                    output_text.Text += $"Количество волн в произвольном сечении сферы (гармоника), равно: {EnteredData.Zl}" + Environment.NewLine;
+                    EnteredData.Zl = Math.Round(EnteredData.Sn * ((2 * EnteredData.R3) / EnteredData.d), MidpointRounding.AwayFromZero); // проверить формулу: Svr или нет????????
+                    //output_text.Text += $"Количество волн в произвольном сечении сферы (гармоника), равно: {EnteredData.Zl}" + Environment.NewLine;
 
                     EnteredData.Lw = (Math.PI * EnteredData.d) / EnteredData.Zl;
-                    output_text.Text += $"Средняя длина шага волн равна {EnteredData.Lw}" + Environment.NewLine;
+                    //output_text.Text += $"Средняя длина шага волн равна {EnteredData.Lw}" + Environment.NewLine;
 
                     EnteredData.Wz = 0.5 * (EnteredData.d - Math.Sqrt(Math.Pow(EnteredData.d, 2) - Math.Pow(EnteredData.Lw, 2)));
-                    output_text.Text += $"Высота волн = {EnteredData.Wz}" + Environment.NewLine;
+                    //output_text.Text += $"Высота волн = {EnteredData.Wz}" + Environment.NewLine;
                 } while (EnteredData.Wz >= EnteredData.delta_V);
 
-                //if (EnteredData.Wz >= EnteredData.delta_V)
-                //{
-                //    EnteredData.R3 = 0.9 * EnteredData.R3;
 
-                //    EnteredData.N_min = Math.Ceiling((EnteredData.kn * Math.PI * EnteredData.d) / (4 * EnteredData.R3)); //округление ТОЛЬКО в большую сторону. При надобности заменить на Math.Round
-                //    output_text.Text += $"Минимально необходимое число оборотов заготовки для обработки всей поверхности сферы = {EnteredData.N_min}";
+                EnteredData.L = EnteredData.Dsh * Math.Acos((EnteredData.Dsh - (2 * EnteredData.t)) / EnteredData.Dsh);
+                //output_text.Text += $"Длина дуги контакта шлифовального круга с заготовкой = {EnteredData.L}" + Environment.NewLine;
 
-                //    for (int i = 1; i < EnteredData.N_min; i++)
-                //    {
-                //        EnteredData.delta_E += (1 - EnteredData.b_c) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3);
-                //        output_text.Text += $"Суммарная погрешность формы обработанной детали (отклонение круглости) равно {EnteredData.delta_E}" + Environment.NewLine;
-                //    }
-
-                //    do
-                //    {
-                //        EnteredData.delta_rb = EnteredData.delta_rb * 0.9;
-
-                //        for (int i = 1; i < EnteredData.N_min; i++)
-                //        {
-                //            EnteredData.delta_E += (1 - EnteredData.b_c) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3);
-                //        }
-                //    } while (EnteredData.delta_E <= EnteredData.delta_SF);
-                //    output_text.Text += $"Конечная cуммарная погрешность формы обработанной детали (отклонение круглости) после пересчета равна {EnteredData.delta_E}" + Environment.NewLine;
-
-                //    EnteredData.An = Math.Round(1 + 2 * (EnteredData.N_min - 1), MidpointRounding.AwayFromZero);
-                //    output_text.Text += $"Нужный член ряда, определяющего число пересечений кольцевых лысок при целом значении n_min равен {EnteredData.An}" + Environment.NewLine;
-
-                //    EnteredData.Sn = (EnteredData.N_min / 2) * (1 + EnteredData.An);
-                //    output_text.Text += $"Общее число площадок пересечения кольцевых лысок равно {EnteredData.Sn}" + Environment.NewLine;
-
-                //    EnteredData.N__min = EnteredData.kn * Math.PI * EnteredData.d * ((EnteredData.Sn * EnteredData.R3) / (4 * (Math.Pow(EnteredData.R3, 2)) * EnteredData.Sn * (Math.Pow(EnteredData.d, 2)) * Math.PI));
-                //    output_text.Text += $"Минимальное число лысок, суммарная ширина которых достаточна для полного покрытия всей сферы, равна {EnteredData.N__min}" + Environment.NewLine;
-
-                //    EnteredData.Zl = Math.Round(EnteredData.Svr * ((2 * EnteredData.R3) / EnteredData.d), MidpointRounding.AwayFromZero); // проверить формулу: Svr или нет????????
-                //    output_text.Text += $"Количество волн в произвольном сечении сферы (гармоника), равно: {EnteredData.Zl}" + Environment.NewLine;
-
-                //    EnteredData.Lw = (Math.PI * EnteredData.d) / EnteredData.Zl;
-                //    output_text.Text += $"Средняя длина шага волн равна {EnteredData.Lw}" + Environment.NewLine;
-
-                //    EnteredData.Wz = 0.5 * (EnteredData.d - Math.Sqrt(Math.Pow(EnteredData.d, 2) - Math.Pow(EnteredData.Lw, 2)));
-                //    output_text.Text += $"Высота волн = {EnteredData.Wz}" + Environment.NewLine;
-                //}
-
-             EnteredData.L = EnteredData.Dsh * Math.Acos((EnteredData.Dsh - (2 * EnteredData.t)) / EnteredData.Dsh);
-             output_text.Text = $"Длина дуги контакта шлифовального круга с заготовкой = {EnteredData.L}" + Environment.NewLine;
-
-             EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d04, 0.289) * 1) / (EnteredData.L * EnteredData.z01)), 0.257) * 0.001;
-             output_text.Text = $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
+                EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d04, 0.289) * 1) / (EnteredData.L * EnteredData.z01)), 0.257) * 0.001;
+                //output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
 
                 if (EnteredData.RA <= EnteredData.Ra)
                 {
-                   output_text.Text += "Произведем перерасчет" + Environment.NewLine;
+                   //output_text.Text += "Произведем перерасчет" + Environment.NewLine;
 
                    EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d03, 0.289) * 1) / (EnteredData.L * EnteredData.z02)), 0.257) * 0.001;
-                   output_text.Text = $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
+                   //output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
 
                     if (EnteredData.RA <= EnteredData.Ra)
                     {
-                        output_text.Text += "Произведем перерасчет" + Environment.NewLine;
+                        //output_text.Text += "Произведем перерасчет" + Environment.NewLine;
 
                         EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d02, 0.289) * 1) / (EnteredData.L * EnteredData.z03)), 0.257) * 0.001;
-                        output_text.Text = $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
+                        //output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
 
                         if (EnteredData.RA <= EnteredData.Ra)
                         {
-                             output_text.Text += "Произведем перерасчет" + Environment.NewLine;
+                             //output_text.Text += "Произведем перерасчет" + Environment.NewLine;
 
                              EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d01, 0.289) * 1) / (EnteredData.L * EnteredData.z04)), 0.257) * 0.001;
-                             output_text.Text = $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
+                             //output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
                         }
                     }
                 }
-                else
-                {
-                   EnteredData.n3 = EnteredData.Nv * (EnteredData.Dv / EnteredData.d3);
-                   output_text.Text = $"Частота вращения заготовки равна {EnteredData.n3}" + Environment.NewLine;
+                EnteredData.n3 = EnteredData.Nv * (EnteredData.Dv / EnteredData.d3);
+                //output_text.Text += $"Частота вращения заготовки равна {EnteredData.n3}" + Environment.NewLine;
 
-                   EnteredData.T = EnteredData.N_min / EnteredData.n3;
-                   output_text.Text = $"Длительность цикла обработки одной сферической заготовки: {EnteredData.T}" + Environment.NewLine;
-                }
+                EnteredData.T = EnteredData.N_min / EnteredData.n3;
+                //output_text.Text += $"Длительность цикла обработки одной сферической заготовки: {EnteredData.T}" + Environment.NewLine;
+
+                output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании Ra (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
+                output_text.Text += $"Высота волн = {EnteredData.Wz}" + Environment.NewLine;
+                output_text.Text += $"Длительность цикла обработки одной сферической заготовки: {EnteredData.T}" + Environment.NewLine;
+                output_text.Text += $"Суммарная погрешность формы обработанной детали (отклонение круглости) равно {EnteredData.delta_E}" + Environment.NewLine;
             }       
-        }
-        
-        private void count_button_Click(object sender, EventArgs e)
-        {
-            Counting();
         }
 
         private void exit_button_Click(object sender, EventArgs e)
