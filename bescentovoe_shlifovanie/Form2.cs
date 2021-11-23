@@ -17,7 +17,7 @@ namespace bescentovoe_shlifovanie
             InitializeComponent();
             Counting(); //перенес сюда, чтобы расчеты открывались мгновенно при запуске Form 2. Кнопка пуска более не целесообразна
         }
-       
+       //проверка
         public void Counting()
         {
             //перевод мкм в мм
