@@ -27,7 +27,7 @@ namespace bescentovoe_shlifovanie
             EnteredData.k = Double.Parse(k_text.Text);
 
             bool filled = f1.Controls.OfType<TextBox>().Any(textBox => textBox.TextLength == 0);
-
+            //Proverka
             if (filled && cilinder_radioButton.Checked && (EnteredData.k >= 0.5 && EnteredData.k <= 0.7))
             {
                 EnteredData.Cilinder = true;
