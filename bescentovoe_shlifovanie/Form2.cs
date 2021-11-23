@@ -37,7 +37,7 @@ namespace bescentovoe_shlifovanie
             EnteredData.h = Math.Round(0.5 * EnteredData.k * (EnteredData.Dv + EnteredData.d) * Math.Sin(Math.Atan(EnteredData.f1)), MidpointRounding.AwayFromZero);
             output_text.Text += $"Величина превышения центра заготовки равна {EnteredData.h}" + Environment.NewLine;
 
-            EnteredData.Alpha = Math.Round(EnteredData.k1*Math.Atan(EnteredData.f1/EnteredData.f2), MidpointRounding.AwayFromZero);
+            EnteredData.Alpha = EnteredData.k1*Math.Atan(EnteredData.f1/EnteredData.f2);
             output_text.Text += $"Величина угла скоса опорного ножа равна {EnteredData.Alpha}" + Environment.NewLine;
 
             EnteredData.Svr = EnteredData.t / Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3);
@@ -71,7 +71,7 @@ namespace bescentovoe_shlifovanie
 
                 for (int i = 1; i < EnteredData.n; i++)
                 {
-                    EnteredData.delta_E += (1 - EnteredData.b_c) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3);
+                    EnteredData.delta_E += (EnteredData.d3 / EnteredData.Dv) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3);
                 }
                 output_text.Text += $"Суммарная погрешность формы обработанной детали (отклонение круглости) равна {EnteredData.delta_E}" + Environment.NewLine;
 
@@ -81,7 +81,7 @@ namespace bescentovoe_shlifovanie
 
                     for (int i = 1; i < EnteredData.n; i++)
                     {
-                        EnteredData.delta_E += (1 - EnteredData.b_c) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3);
+                        EnteredData.delta_E += (EnteredData.d3 / EnteredData.Dv) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3);
                     }
                 } while (EnteredData.delta_E <= EnteredData.delta_KR);
                 output_text.Text += $"Конечная cуммарная погрешность формы обработанной детали (отклонение круглости) равна {EnteredData.delta_E}" + Environment.NewLine;
@@ -93,13 +93,13 @@ namespace bescentovoe_shlifovanie
                 EnteredData.N_min = Math.Ceiling((EnteredData.kn * Math.PI * EnteredData.d) / (4 * EnteredData.R3)); //округление ТОЛЬКО в большую сторону. При надобности заменить на Math.Round
                 //output_text.Text += $"Минимально необходимое число оборотов заготовки для обработки всей поверхности сферы = {EnteredData.N_min}" + Environment.NewLine;
 
-                EnteredData.delta_E = ((1 - EnteredData.b_c) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3)) * EnteredData.N_min;
+                EnteredData.delta_E = ((EnteredData.d3 / EnteredData.Dv) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3)) * EnteredData.N_min;
 
                 while (EnteredData.delta_E > EnteredData.delta_SF)
                 {
                     EnteredData.delta_rb = EnteredData.delta_rb * 0.9;
 
-                    EnteredData.delta_E = ((1 - EnteredData.b_c) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3)) * EnteredData.N_min;
+                    EnteredData.delta_E = ((EnteredData.d3 / EnteredData.Dv) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3)) * EnteredData.N_min;
                 }
                 //output_text.Text += $"Суммарная погрешность формы обработанной детали (отклонение круглости) равно {EnteredData.delta_E}" + Environment.NewLine;
 
@@ -129,13 +129,13 @@ namespace bescentovoe_shlifovanie
                     EnteredData.N_min = Math.Ceiling((EnteredData.kn * Math.PI * EnteredData.d) / (4 * EnteredData.R3)); //округление ТОЛЬКО в большую сторону. При надобности заменить на Math.Round
                     //output_text.Text += $"Минимально необходимое число оборотов заготовки для обработки всей поверхности сферы = {EnteredData.N_min}" + Environment.NewLine;
 
-                    EnteredData.delta_E = (1 - EnteredData.b_c) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3) * EnteredData.N_min;
+                    EnteredData.delta_E = (EnteredData.d3 / EnteredData.Dv) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3) * EnteredData.N_min;
 
                     do
                     {
                         EnteredData.delta_rb *= 0.9;
 
-                        EnteredData.delta_E = (1 - EnteredData.b_c) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3) * EnteredData.N_min;
+                        EnteredData.delta_E = (EnteredData.d3 / EnteredData.Dv) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3) * EnteredData.N_min;
                         
                     } while (EnteredData.delta_E > EnteredData.delta_SF);
                     //output_text.Text += $"Конечная cуммарная погрешность формы обработанной детали (отклонение круглости) после пересчета равна {EnteredData.delta_E}" + Environment.NewLine;
