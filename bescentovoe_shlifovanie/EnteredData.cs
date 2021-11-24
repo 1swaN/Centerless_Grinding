@@ -40,8 +40,10 @@ namespace bescentovoe_shlifovanie
         public static double Nv;
         public static double z;
         public static double delta_rb;
+        public static double l;
+        public static double delta_prod;
 
-        //значения метода beginning
+        //значения метода counting
         public static double h;
         public static double Alpha;
         public static double Svr;
@@ -67,5 +69,11 @@ namespace bescentovoe_shlifovanie
         public static double RA;
         public static double n3;
         public static double T;
+        public static double x1;
+        public static double x2;
+        public static double delta_Prod;
+        public static double A;
+        public static double H0;
+
     }
 }

@@ -50,7 +50,7 @@ namespace bescentovoe_shlifovanie
                     EnteredData.d02 = Double.Parse(d02_text.Text);
                     EnteredData.d03 = Double.Parse(d03_text.Text);
                     EnteredData.d04 = Double.Parse(d04_text.Text);
-                    EnteredData.U = Double.Parse(U_d3_Dv_text.Text);  
+                    EnteredData.l = Double.Parse(l_text.Text);
                     EnteredData.R3 = Double.Parse(R3_text.Text);
                     EnteredData.Nv = Double.Parse(nv_text.Text);
                     EnteredData.z = Double.Parse(z_text.Text);
@@ -61,6 +61,7 @@ namespace bescentovoe_shlifovanie
                     EnteredData.delta_V = Double.Parse(delta_v_text.Text);
                     EnteredData.delta_rb = Double.Parse(delta_rb_text.Text);
                     EnteredData.delta_SF = Double.Parse(delta_sf_text.Text);
+                    EnteredData.delta_prod = Double.Parse(delta_prod_text.Text);
 
                     Form2 f2 = new Form2();
                     f2.Show();
@@ -92,7 +93,7 @@ namespace bescentovoe_shlifovanie
                     EnteredData.d02 = Double.Parse(d02_text.Text);
                     EnteredData.d03 = Double.Parse(d03_text.Text);
                     EnteredData.d04 = Double.Parse(d04_text.Text);
-                    EnteredData.U = Double.Parse(U_d3_Dv_text.Text);
+                    EnteredData.l = Double.Parse(l_text.Text);
                     EnteredData.R3 = Double.Parse(R3_text.Text);
                     EnteredData.Nv = Double.Parse(nv_text.Text);
                     EnteredData.z = Double.Parse(z_text.Text);
@@ -103,6 +104,7 @@ namespace bescentovoe_shlifovanie
                     EnteredData.delta_V = Double.Parse(delta_v_text.Text);
                     EnteredData.delta_rb = Double.Parse(delta_rb_text.Text);
                     EnteredData.delta_SF = Double.Parse(delta_sf_text.Text);
+                    EnteredData.delta_prod = Double.Parse(delta_prod_text.Text);
 
                     Form2 f2 = new Form2();
                     f2.Show();
