@@ -160,7 +160,7 @@ namespace bescentovoe_shlifovanie
 
                 while (EnteredData.delta_E > EnteredData.delta_SF)
                 {
-                    EnteredData.delta_rb = EnteredData.delta_rb * 0.9;
+                    EnteredData.delta_rb *= 0.9;
 
                     EnteredData.delta_E = ((EnteredData.d3 / EnteredData.Dv) * EnteredData.delta_rb * Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3)) * EnteredData.N_min;
                 }
@@ -212,7 +212,7 @@ namespace bescentovoe_shlifovanie
                     EnteredData.N__min = EnteredData.kn * Math.PI * EnteredData.d * ((EnteredData.Sn * EnteredData.R3) / (4 * (Math.Pow(EnteredData.R3, 2)) * EnteredData.Sn * (Math.Pow(EnteredData.d, 2)) * Math.PI));
                     //output_text.Text += $"Минимальное число лысок, суммарная ширина которых достаточна для полного покрытия всей сферы, равна {EnteredData.N__min}" + Environment.NewLine;
 
-                    EnteredData.Zl = Math.Round(EnteredData.Sn * ((2 * EnteredData.R3) / EnteredData.d), MidpointRounding.AwayFromZero); // проверить формулу: Svr или нет????????
+                    EnteredData.Zl = Math.Round(EnteredData.Sn * ((2 * EnteredData.R3) / EnteredData.d), MidpointRounding.AwayFromZero); 
                     //output_text.Text += $"Количество волн в произвольном сечении сферы (гармоника), равно: {EnteredData.Zl}" + Environment.NewLine;
 
                     EnteredData.Lw = (Math.PI * EnteredData.d) / EnteredData.Zl;
