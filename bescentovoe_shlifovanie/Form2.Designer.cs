@@ -35,7 +35,7 @@ namespace bescentovoe_shlifovanie
             // 
             // output_text
             // 
-            this.output_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.output_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.output_text.Location = new System.Drawing.Point(8, 12);
             this.output_text.Multiline = true;
             this.output_text.Name = "output_text";

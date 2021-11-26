@@ -129,5 +129,17 @@ namespace bescentovoe_shlifovanie
             proc.StartInfo.UseShellExecute = true;
             proc.Start();
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //форма вывода предупреждения о закрытии окна ввода данных, чтобы случайно его не закрыть
+            DialogResult result = MessageBox.Show("Вы точно хотите закрыть программу?",
+              "Внимание!", //Сообщение пользователю
+              MessageBoxButtons.YesNo, //вывод кнопок диалога Да/Нет
+              MessageBoxIcon.Question, //иконка вопроса
+              MessageBoxDefaultButton.Button1);
+            if (result == DialogResult.No)
+                e.Cancel = true;
+        }
     }
 }

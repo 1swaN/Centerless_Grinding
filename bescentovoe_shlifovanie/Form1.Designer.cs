@@ -202,7 +202,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(22, 323);
+            this.label11.Location = new System.Drawing.Point(22, 325);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(26, 16);
             this.label11.TabIndex = 10;
@@ -212,7 +212,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(149, 323);
+            this.label12.Location = new System.Drawing.Point(149, 325);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(28, 16);
             this.label12.TabIndex = 11;
@@ -487,7 +487,7 @@ namespace bescentovoe_shlifovanie
             // d01_text
             // 
             this.d01_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.d01_text.Location = new System.Drawing.Point(57, 317);
+            this.d01_text.Location = new System.Drawing.Point(57, 319);
             this.d01_text.Name = "d01_text";
             this.d01_text.Size = new System.Drawing.Size(63, 24);
             this.d01_text.TabIndex = 43;
@@ -503,7 +503,7 @@ namespace bescentovoe_shlifovanie
             // d02_text
             // 
             this.d02_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.d02_text.Location = new System.Drawing.Point(185, 317);
+            this.d02_text.Location = new System.Drawing.Point(185, 319);
             this.d02_text.Name = "d02_text";
             this.d02_text.Size = new System.Drawing.Size(59, 24);
             this.d02_text.TabIndex = 45;
@@ -810,6 +810,7 @@ namespace bescentovoe_shlifovanie
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Определение параметров раб. зоны и режима врезного бесцентрового шлифования. Ввод" +
     " параметров";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

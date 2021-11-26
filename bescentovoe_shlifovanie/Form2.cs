@@ -147,7 +147,7 @@ namespace bescentovoe_shlifovanie
 
                 //перебрать d0i и z0i
 
-                EnteredData.H0 = 0.2 * EnteredData.d
+                EnteredData.H0 = 0.2 * EnteredData.d;
             }
 
 
