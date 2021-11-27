@@ -138,16 +138,30 @@ namespace bescentovoe_shlifovanie
                     EnteredData.x1 = 0.1 * EnteredData.l;
                     EnteredData.x2 = EnteredData.l / 2;
                     EnteredData.delta_Prod = EnteredData.t * (Math.Pow((EnteredData.l / EnteredData.x1), 0.21) - Math.Pow((EnteredData.l - EnteredData.x2), 0.21));
-                    output_text.Text += $"Бочкообразность = {EnteredData.delta_Prod}";
+                    output_text.Text += $"Бочкообразность = {EnteredData.delta_Prod}" + Environment.NewLine;
 
                 } while (EnteredData.delta_Prod > EnteredData.delta_prod);
 
                 EnteredData.A = (EnteredData.Dsh * EnteredData.d) / (EnteredData.Dsh + EnteredData.d);
-                output_text.Text += $"Параметр А = {EnteredData.A}";
+                output_text.Text += $"Параметр А = {EnteredData.A}" + Environment.NewLine;
 
                 //перебрать d0i и z0i
 
-                EnteredData.H0 = 0.2 * EnteredData.d;
+                EnteredData.H0 = 0.2 * EnteredData.d0[0];
+                EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(EnteredData.d0[0], 0.14) / EnteredData.z0[0] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))));
+                EnteredData.S = 0.66 * EnteredData.Bkr;
+
+                do
+                {
+                    for (int i = 1; i < 4; i++)
+                    {
+                        EnteredData.S *= 0.9;
+                        EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(EnteredData.d0[i], 0.14) / EnteredData.z0[i] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))));
+                    }
+                } while (EnteredData.RA > EnteredData.Ra);
+
+                //выводим h, alpha, Sвр, Dв, t, delta_Prod, delta E, RA
+                output_text.Text += $"Ra = {EnteredData.RA}" + Environment.NewLine; 
             }
 
 
@@ -226,32 +240,40 @@ namespace bescentovoe_shlifovanie
                 EnteredData.L = EnteredData.Dsh * Math.Acos((EnteredData.Dsh - (2 * EnteredData.t)) / EnteredData.Dsh);
                 //output_text.Text += $"Длина дуги контакта шлифовального круга с заготовкой = {EnteredData.L}" + Environment.NewLine;
 
-                EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d04, 0.289) * 1) / (EnteredData.L * EnteredData.z01)), 0.257) * 0.001;
+                EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d0[0], 0.289) * 1) / (EnteredData.L * EnteredData.z0[0])), 0.257) * 0.001;
                 //output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
 
-                if (EnteredData.RA <= EnteredData.Ra)
+                do
                 {
-                   //output_text.Text += "Произведем перерасчет" + Environment.NewLine;
-
-                   EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d03, 0.289) * 1) / (EnteredData.L * EnteredData.z02)), 0.257) * 0.001;
-                   //output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
-
-                    if (EnteredData.RA <= EnteredData.Ra)
+                    for (int i = 1; i < 4; i++)
                     {
-                        //output_text.Text += "Произведем перерасчет" + Environment.NewLine;
-
-                        EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d02, 0.289) * 1) / (EnteredData.L * EnteredData.z03)), 0.257) * 0.001;
-                        //output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
-
-                        if (EnteredData.RA <= EnteredData.Ra)
-                        {
-                             //output_text.Text += "Произведем перерасчет" + Environment.NewLine;
-
-                             EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d01, 0.289) * 1) / (EnteredData.L * EnteredData.z04)), 0.257) * 0.001;
-                             //output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
-                        }
+                        EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d0[i], 0.289) * 1) / (EnteredData.L * EnteredData.z0[i])), 0.257) * 0.001;
                     }
-                }
+                } while (EnteredData.RA > EnteredData.Ra);
+
+                //if (EnteredData.RA <= EnteredData.Ra)
+                //{
+                //   //output_text.Text += "Произведем перерасчет" + Environment.NewLine;
+
+                //   EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d03, 0.289) * 1) / (EnteredData.L * EnteredData.z02)), 0.257) * 0.001;
+                //   //output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
+
+                //    if (EnteredData.RA <= EnteredData.Ra)
+                //    {
+                //        //output_text.Text += "Произведем перерасчет" + Environment.NewLine;
+
+                //        EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d02, 0.289) * 1) / (EnteredData.L * EnteredData.z03)), 0.257) * 0.001;
+                //        //output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
+
+                //        if (EnteredData.RA <= EnteredData.Ra)
+                //        {
+                //             //output_text.Text += "Произведем перерасчет" + Environment.NewLine;
+
+                //             EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d01, 0.289) * 1) / (EnteredData.L * EnteredData.z04)), 0.257) * 0.001;
+                //             //output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
+                //        }
+                //    }
+                //}
                 EnteredData.n3 = EnteredData.Nv * (EnteredData.Dv / EnteredData.d3);
                 //output_text.Text += $"Частота вращения заготовки равна {EnteredData.n3}" + Environment.NewLine;
 

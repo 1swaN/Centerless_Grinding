@@ -74,6 +74,12 @@ namespace bescentovoe_shlifovanie
         public static double delta_Prod;
         public static double A;
         public static double H0;
+        public static double S;
+        public static double Vkr;
+        public static double Vg;
+        public static double Bkr;
 
+        public static double[] z0 = {z01, z02, z03, z04};
+        public static double[] d0 = {d04, d03, d02, d01};
     }
 }
