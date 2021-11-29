@@ -247,7 +247,10 @@ namespace bescentovoe_shlifovanie
                 {
                     for (int i = 1; i < 4; i++)
                     {
-                        EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d0[i], 0.289) * 1) / (EnteredData.L * EnteredData.z0[i])), 0.257) * 0.001;
+                        if (EnteredData.RA <= EnteredData.Ra)
+                        {
+                            EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d0[i], 0.289) * 1) / (EnteredData.L * EnteredData.z0[i])), 0.257) * 0.001;
+                        }
                     }
                 } while (EnteredData.RA > EnteredData.Ra);
 
