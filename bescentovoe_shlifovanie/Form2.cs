@@ -149,7 +149,7 @@ namespace bescentovoe_shlifovanie
 
                 EnteredData.H0 = 0.2 * EnteredData.d0[0];
                 EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(EnteredData.d0[0], 0.14) / EnteredData.z0[0] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))));
-                EnteredData.S = 0.66 * EnteredData.Bkr;
+                EnteredData.S = 0.66 * EnteredData.Bkr; //проверить
 
                 do
                 {
