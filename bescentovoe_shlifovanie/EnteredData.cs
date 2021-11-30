@@ -79,7 +79,7 @@ namespace bescentovoe_shlifovanie
         public static double Vg { get; set; }
         public static double Bkr { get; set; }
 
-        public static double[] z0 = { z01, z02, z03, z04 };
-        public static double[] d0 = { d04, d03, d02, d01 };
+        //public static double[] z0 = new double[4] { z01, z02, z03, z04 };
+        //public static double[] d0 = new double[4] { d04, d03, d02, d01 };
     }
 }

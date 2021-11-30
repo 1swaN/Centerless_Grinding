@@ -12,6 +12,8 @@ namespace bescentovoe_shlifovanie
 {
     public partial class Form2 : Form
     {
+        public  double[] z0 = new double[4] { EnteredData.z01, EnteredData.z02, EnteredData.z03, EnteredData.z04 };
+        public  double[] d0 = new double[4] { EnteredData.d04, EnteredData.d03, EnteredData.d02, EnteredData.d01 };
         public Form2()
         {
             InitializeComponent();
@@ -147,8 +149,8 @@ namespace bescentovoe_shlifovanie
 
                 //перебрать d0i и z0i
 
-                EnteredData.H0 = 0.2 * EnteredData.d0[0];
-                EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(EnteredData.d0[0], 0.14) / EnteredData.z0[0] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))));
+                EnteredData.H0 = 0.2 * d0[0];
+                EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(d0[0], 0.14) / z0[0] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))));
                 EnteredData.S = 0.66 * EnteredData.Bkr; //проверить
 
                 do
@@ -156,7 +158,7 @@ namespace bescentovoe_shlifovanie
                     for (int i = 1; i < 4; i++)
                     {
                         EnteredData.S *= 0.9;
-                        EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(EnteredData.d0[i], 0.14) / EnteredData.z0[i] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))));
+                        EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(d0[i], 0.14) / z0[i] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))));
                     }
                 } while (EnteredData.RA > EnteredData.Ra);
 
@@ -239,8 +241,8 @@ namespace bescentovoe_shlifovanie
 
                 EnteredData.L = EnteredData.Dsh * Math.Acos((EnteredData.Dsh - (2 * EnteredData.t)) / EnteredData.Dsh);
                 //output_text.Text += $"Длина дуги контакта шлифовального круга с заготовкой = {EnteredData.L}" + Environment.NewLine;
-                MessageBox.Show($"{EnteredData.d0[0]}");
-                EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d0[0], 0.289) * 1) / (EnteredData.L * EnteredData.z0[0])), 0.257) * 0.001;
+                MessageBox.Show($"{d0[0]}");
+                EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(d0[0], 0.289) * 1) / (EnteredData.L * z0[0])), 0.257) * 0.001;
 
                 //output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
 
@@ -248,7 +250,7 @@ namespace bescentovoe_shlifovanie
                 {
                     while (EnteredData.RA > EnteredData.Ra)
                     {
-                        EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d0[i], 0.289) * 1) / (EnteredData.L * EnteredData.z0[i])), 0.257) * 0.001;
+                        EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(d0[i], 0.289) * 1) / (EnteredData.L * z0[i])), 0.257) * 0.001;
                     }
                 }
 
