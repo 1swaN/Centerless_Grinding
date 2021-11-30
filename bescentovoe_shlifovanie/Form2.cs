@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace bescentovoe_shlifovanie
 {
     public partial class Form2 : Form
-    {
+    {  
+        //массивы данных d0i z0i
         public  double[] z0 = new double[4] { EnteredData.z01, EnteredData.z02, EnteredData.z03, EnteredData.z04 };
         public  double[] d0 = new double[4] { EnteredData.d04, EnteredData.d03, EnteredData.d02, EnteredData.d01 };
         public Form2()
@@ -150,17 +151,28 @@ namespace bescentovoe_shlifovanie
                 //перебрать d0i и z0i
 
                 EnteredData.H0 = 0.2 * d0[0];
-                EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(d0[0], 0.14) / z0[0] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))));
                 EnteredData.S = 0.66 * EnteredData.Bkr; //проверить
+                EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(d0[0], 0.14) / z0[0] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))));
+                
 
-                do
+                while (EnteredData.RA > EnteredData.Ra)
                 {
                     for (int i = 1; i < 4; i++)
                     {
                         EnteredData.S *= 0.9;
                         EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(d0[i], 0.14) / z0[i] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))));
                     }
-                } while (EnteredData.RA > EnteredData.Ra);
+                }
+
+
+                //do
+                //{
+                //    for (int i = 1; i < 4; i++)
+                //    {
+                //        EnteredData.S *= 0.9;
+                //        EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(d0[i], 0.14) / z0[i] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))));
+                //    }
+                //} while (EnteredData.RA > EnteredData.Ra);
 
                 //выводим h, alpha, Sвр, Dв, t, delta_Prod, delta E, RA
                 output_text.Text += $"Ra = {EnteredData.RA}" + Environment.NewLine; 
