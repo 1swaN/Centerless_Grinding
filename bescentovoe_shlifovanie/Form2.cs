@@ -239,20 +239,30 @@ namespace bescentovoe_shlifovanie
 
                 EnteredData.L = EnteredData.Dsh * Math.Acos((EnteredData.Dsh - (2 * EnteredData.t)) / EnteredData.Dsh);
                 //output_text.Text += $"Длина дуги контакта шлифовального круга с заготовкой = {EnteredData.L}" + Environment.NewLine;
-
+                MessageBox.Show($"{EnteredData.d0[0]}");
                 EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d0[0], 0.289) * 1) / (EnteredData.L * EnteredData.z0[0])), 0.257) * 0.001;
+
                 //output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
 
-                do
+                for (int i = 1; i < 4; i++)
                 {
-                    for (int i = 1; i < 4; i++)
+                    while (EnteredData.RA > EnteredData.Ra)
                     {
-                        if (EnteredData.RA <= EnteredData.Ra)
-                        {
-                            EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d0[i], 0.289) * 1) / (EnteredData.L * EnteredData.z0[i])), 0.257) * 0.001;
-                        }
+                        EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d0[i], 0.289) * 1) / (EnteredData.L * EnteredData.z0[i])), 0.257) * 0.001;
                     }
-                } while (EnteredData.RA > EnteredData.Ra);
+                }
+
+
+                //do
+                //{
+                //    for (int i = 1; i < 4; i++)
+                //    {
+                //        if (EnteredData.RA <= EnteredData.Ra)
+                //        {
+                //            EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d0[i], 0.289) * 1) / (EnteredData.L * EnteredData.z0[i])), 0.257) * 0.001;
+                //        }
+                //    }
+                //} while (EnteredData.RA > EnteredData.Ra);
 
                 //if (EnteredData.RA <= EnteredData.Ra)
                 //{

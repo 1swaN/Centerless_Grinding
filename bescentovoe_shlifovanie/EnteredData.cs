@@ -9,77 +9,77 @@ namespace bescentovoe_shlifovanie
     class EnteredData
     {
         //введенные значения
-        public static double Dv;
-        public static double Dsh;
-        public static double d;
-        public static double d3;
-        public static double t;
-        public static double f1;
-        public static double f2;
-        public static double z01;
-        public static double z02;
-        public static double z03;
-        public static double z04;
-        public static double d01;
-        public static double d02;
-        public static double d03;
-        public static double d04;
-        public static double U;
-        public static double k;
+        public static double Dv { get; set; }
+        public static double Dsh { get; set; }
+        public static double d { get; set; }
+        public static double d3 { get; set; }
+        public static double t { get; set; }
+        public static double f1 { get; set; }
+        public static double f2 { get; set; }
+        public static double z01 { get; set; }
+        public static double z02 { get; set; }
+        public static double z03 { get; set; }
+        public static double z04 { get; set; }
+        public static double d01 { get; set; }
+        public static double d02 { get; set; }
+        public static double d03 { get; set; }
+        public static double d04 { get; set; }
+        public static double U { get; set; }
+        public static double k { get; set; }
         public static double k1 = 1.5;
         public static double kn = 1.2;
         public static double b_c = 0.1;
-        public static double R3;
+        public static double R3 { get; set; }
         public static double beta = 15;
-        public static double Td;
-        public static double Ra;
-        public static double delta_KR;
-        public static double delta_SF;
-        public static double delta_OGR;
-        public static double delta_V;
-        public static double Nv;
-        public static double z;
-        public static double delta_rb;
-        public static double l;
-        public static double delta_prod;
+        public static double Td { get; set; }
+        public static double Ra { get; set; }
+        public static double delta_KR { get; set; }
+        public static double delta_SF { get; set; }
+        public static double delta_OGR { get; set; }
+        public static double delta_V { get; set; }
+        public static double Nv { get; set; }
+        public static double z { get; set; }
+        public static double delta_rb { get; set; }
+        public static double l { get; set; }
+        public static double delta_prod { get; set; }
 
         //значения метода counting
-        public static double h;
-        public static double Alpha;
-        public static double Svr;
-        public static double h1;
-        public static double Epsilon;
+        public static double h { get; set; }
+        public static double Alpha { get; set; }
+        public static double Svr { get; set; }
+        public static double h1 { get; set; }
+        public static double Epsilon { get; set; }
 
-        public static bool Cilinder;
-        public static bool Sfera;
-        public static bool EmptySfera;
+        public static bool Cilinder { get; set; }
+        public static bool Sfera { get; set; }
+        public static bool EmptySfera { get; set; }
 
-        public static double n;
-        public static double delta_E;
-        public static double N_min;
-        public static double An;
-        public static double Sn;
-        public static double N__min;
-        public static double Zl;
-        public static double Lw;
-        public static double Wz;
-        public static double L;
-        public static double d0_max;
-        public static double z0_min;
-        public static double RA;
-        public static double n3;
-        public static double T;
-        public static double x1;
-        public static double x2;
-        public static double delta_Prod;
-        public static double A;
-        public static double H0;
-        public static double S;
-        public static double Vkr;
-        public static double Vg;
-        public static double Bkr;
+        public static double n { get; set; }
+        public static double delta_E { get; set; }
+        public static double N_min { get; set; }
+        public static double An { get; set; }
+        public static double Sn { get; set; }
+        public static double N__min { get; set; }
+        public static double Zl { get; set; }
+        public static double Lw { get; set; }
+        public static double Wz { get; set; }
+        public static double L { get; set; }
+        public static double d0_max { get; set; } 
+        public static double z0_min { get; set; }
+        public static double RA { get; set; }
+        public static double n3 { get; set; }
+        public static double T { get; set; }
+        public static double x1 { get; set; }
+        public static double x2 { get; set; }
+        public static double delta_Prod { get; set; }
+        public static double A { get; set; }
+        public static double H0 { get; set; }
+        public static double S { get; set; }
+        public static double Vkr { get; set; }
+        public static double Vg { get; set; }
+        public static double Bkr { get; set; }
 
-        public static double[] z0 = {z01, z02, z03, z04};
-        public static double[] d0 = {d04, d03, d02, d01};
+        public static double[] z0 = { z01, z02, z03, z04 };
+        public static double[] d0 = { d04, d03, d02, d01 };
     }
 }
