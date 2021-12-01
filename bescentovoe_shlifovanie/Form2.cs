@@ -12,7 +12,8 @@ namespace bescentovoe_shlifovanie
 {
     public partial class Form2 : Form
     {  
-        //массивы данных d0i z0i
+        //массивы данных d0i && z0i
+
         public  double[] z0 = new double[4] { EnteredData.z01, EnteredData.z02, EnteredData.z03, EnteredData.z04 };
         public  double[] d0 = new double[4] { EnteredData.d04, EnteredData.d03, EnteredData.d02, EnteredData.d01 };
         public Form2()
@@ -163,17 +164,6 @@ namespace bescentovoe_shlifovanie
                         EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(d0[i], 0.14) / z0[i] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))));
                     }
                 }
-
-
-                //do
-                //{
-                //    for (int i = 1; i < 4; i++)
-                //    {
-                //        EnteredData.S *= 0.9;
-                //        EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(d0[i], 0.14) / z0[i] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))));
-                //    }
-                //} while (EnteredData.RA > EnteredData.Ra);
-
                 //выводим h, alpha, Sвр, Dв, t, delta_Prod, delta E, RA
                 output_text.Text += $"Ra = {EnteredData.RA}" + Environment.NewLine; 
             }
@@ -265,42 +255,6 @@ namespace bescentovoe_shlifovanie
                         EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(d0[i], 0.289) * 1) / (EnteredData.L * z0[i])), 0.257) * 0.001;
                     }
                 }
-
-
-                //do
-                //{
-                //    for (int i = 1; i < 4; i++)
-                //    {
-                //        if (EnteredData.RA <= EnteredData.Ra)
-                //        {
-                //            EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d0[i], 0.289) * 1) / (EnteredData.L * EnteredData.z0[i])), 0.257) * 0.001;
-                //        }
-                //    }
-                //} while (EnteredData.RA > EnteredData.Ra);
-
-                //if (EnteredData.RA <= EnteredData.Ra)
-                //{
-                //   //output_text.Text += "Произведем перерасчет" + Environment.NewLine;
-
-                //   EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d03, 0.289) * 1) / (EnteredData.L * EnteredData.z02)), 0.257) * 0.001;
-                //   //output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
-
-                //    if (EnteredData.RA <= EnteredData.Ra)
-                //    {
-                //        //output_text.Text += "Произведем перерасчет" + Environment.NewLine;
-
-                //        EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d02, 0.289) * 1) / (EnteredData.L * EnteredData.z03)), 0.257) * 0.001;
-                //        //output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
-
-                //        if (EnteredData.RA <= EnteredData.Ra)
-                //        {
-                //             //output_text.Text += "Произведем перерасчет" + Environment.NewLine;
-
-                //             EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(EnteredData.d01, 0.289) * 1) / (EnteredData.L * EnteredData.z04)), 0.257) * 0.001;
-                //             //output_text.Text += $"Среднее арифметическое отклонение микропрофиля при врезном шлифовании (cos B = 1) равно {EnteredData.RA}" + Environment.NewLine;
-                //        }
-                //    }
-                //}
                 EnteredData.n3 = EnteredData.Nv * (EnteredData.Dv / EnteredData.d3);
                 //output_text.Text += $"Частота вращения заготовки равна {EnteredData.n3}" + Environment.NewLine;
 
@@ -313,7 +267,6 @@ namespace bescentovoe_shlifovanie
                 output_text.Text += $"Суммарная погрешность формы обработанной детали (отклонение круглости) равно {EnteredData.delta_E}" + Environment.NewLine;
             }       
         }
-
         private void exit_button_Click(object sender, EventArgs e)
         {
             Application.Exit();
