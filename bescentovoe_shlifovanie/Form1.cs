@@ -121,7 +121,7 @@ namespace bescentovoe_shlifovanie
             }
             else
             {
-                MessageBox.Show("Заполните все поля!");
+                MessageBox.Show("Поля не заполнены или заполнены неверно. Проверьте заполнение");
             }
         }
 
