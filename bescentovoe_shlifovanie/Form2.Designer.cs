@@ -35,6 +35,7 @@ namespace bescentovoe_shlifovanie
             // 
             // output_text
             // 
+            this.output_text.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.output_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.output_text.Location = new System.Drawing.Point(8, 12);
             this.output_text.Multiline = true;
