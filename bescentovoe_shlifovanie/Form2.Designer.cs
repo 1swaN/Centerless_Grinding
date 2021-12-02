@@ -46,6 +46,7 @@ namespace bescentovoe_shlifovanie
             // 
             // exit_button
             // 
+            this.exit_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exit_button.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.exit_button.Location = new System.Drawing.Point(884, 539);
             this.exit_button.Name = "exit_button";

@@ -415,6 +415,7 @@ namespace bescentovoe_shlifovanie
             // 
             // count_button
             // 
+            this.count_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.count_button.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.count_button.Location = new System.Drawing.Point(488, 783);
             this.count_button.Name = "count_button";
@@ -426,6 +427,7 @@ namespace bescentovoe_shlifovanie
             // 
             // Exit_button
             // 
+            this.Exit_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Exit_button.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.Exit_button.Location = new System.Drawing.Point(579, 783);
             this.Exit_button.Name = "Exit_button";
@@ -637,6 +639,7 @@ namespace bescentovoe_shlifovanie
             // how_2_use_linklabel
             // 
             this.how_2_use_linklabel.AutoSize = true;
+            this.how_2_use_linklabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.how_2_use_linklabel.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.how_2_use_linklabel.Location = new System.Drawing.Point(18, 783);
             this.how_2_use_linklabel.Name = "how_2_use_linklabel";
@@ -659,6 +662,7 @@ namespace bescentovoe_shlifovanie
             // sfera_radioButton
             // 
             this.sfera_radioButton.AutoSize = true;
+            this.sfera_radioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sfera_radioButton.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.sfera_radioButton.Location = new System.Drawing.Point(542, 338);
             this.sfera_radioButton.Name = "sfera_radioButton";
@@ -671,6 +675,7 @@ namespace bescentovoe_shlifovanie
             // cilinder_radioButton
             // 
             this.cilinder_radioButton.AutoSize = true;
+            this.cilinder_radioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cilinder_radioButton.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.cilinder_radioButton.Location = new System.Drawing.Point(542, 313);
             this.cilinder_radioButton.Name = "cilinder_radioButton";
@@ -874,8 +879,7 @@ namespace bescentovoe_shlifovanie
             this.MaximumSize = new System.Drawing.Size(701, 770);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Определение параметров раб. зоны и режима врезного бесцентрового шлифования. Ввод" +
-    " параметров";
+            this.Text = "Ввод параметров";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
