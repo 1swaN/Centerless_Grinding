@@ -435,6 +435,7 @@ namespace bescentovoe_shlifovanie
             this.Exit_button.TabIndex = 35;
             this.Exit_button.Text = "Выход";
             this.Exit_button.UseVisualStyleBackColor = true;
+            this.Exit_button.Click += new System.EventHandler(this.Exit_button_Click);
             // 
             // Dv_text
             // 

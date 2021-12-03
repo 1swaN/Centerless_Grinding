@@ -146,5 +146,10 @@ namespace bescentovoe_shlifovanie
             if (result == DialogResult.No)
                 e.Cancel = true;
         }
+
+        private void Exit_button_Click(object sender, EventArgs e)
+        {
+                Application.Exit();
+        }
     }
 }
