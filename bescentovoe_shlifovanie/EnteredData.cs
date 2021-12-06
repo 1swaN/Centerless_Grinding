@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace bescentovoe_shlifovanie
 {
-    class EnteredData
+    class EnteredData //класс, содержащий все переменные, используемые в программе
     {
-        //введенные значения
+        //введенные значения в Form1
         public static double Dv { get; set; }
         public static double Dsh { get; set; }
         public static double d { get; set; }
@@ -26,10 +26,14 @@ namespace bescentovoe_shlifovanie
         public static double d04 { get; set; }
         public static double U { get; set; }
         public static double k { get; set; }
+
         public static double k1 = 1.5;
+
         public static double kn = 1.2;
+
         public static double b_c = 0.1;
         public static double R3 { get; set; }
+
         public static double beta = 15;
         public static double Td { get; set; }
         public static double Ra { get; set; }
@@ -43,7 +47,7 @@ namespace bescentovoe_shlifovanie
         public static double l { get; set; }
         public static double delta_prod { get; set; }
 
-        //значения метода counting
+        //значения метода counting 
         public static double h { get; set; }
         public static double Alpha { get; set; }
         public static double Svr { get; set; }
@@ -78,8 +82,5 @@ namespace bescentovoe_shlifovanie
         public static double Vkr { get; set; }
         public static double Vg { get; set; }
         public static double Bkr { get; set; }
-
-        //public static double[] z0 = new double[4] { z01, z02, z03, z04 };
-        //public static double[] d0 = new double[4] { d04, d03, d02, d01 };
     }
 }
