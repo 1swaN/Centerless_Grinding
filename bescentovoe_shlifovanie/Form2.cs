@@ -46,18 +46,25 @@ namespace bescentovoe_shlifovanie
             EnteredData.h1 = EnteredData.h - ((EnteredData.d3 - EnteredData.d) / 2) * (1 - Math.Sin(EnteredData.Alpha)); //величина превышения оси детали над плоскость расположения осей абразивных кругов после окончания обработки
             
             EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2)))); //вычисление погрешности размера по диаметру детали
-            
-            do
-            {
-                //пока условие в while истинно, будет выполняться перерасчет (если оно не истинно, то расчет идет далее, пропуская перерасчет):
 
+
+            while (EnteredData.Epsilon > 0.4 * EnteredData.Td)
+            {
                 EnteredData.Alpha *= 0.9; //перерасчет размерности угла скоса опорного ножа
 
                 EnteredData.h1 = EnteredData.h - ((EnteredData.d3 - EnteredData.d) / 2) * (1 - Math.Sin(EnteredData.Alpha)); //перерасчет величины превышения оси с учетом ного значения угла скоса
 
                 EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2)))); //перерасчет погрешности размера с учетом ранее перерасчитанных значений
+            }
 
-            } while (EnteredData.Epsilon >= 0.4 * EnteredData.Td); //условие прохождения перерасчета (выполняется до тех пор, пока значение перестанет ему соответствовать)
+
+            //do
+            //{
+            //    //пока условие в while истинно, будет выполняться перерасчет (если оно не истинно, то расчет идет далее, пропуская перерасчет):
+
+                
+
+            //} while (EnteredData.Epsilon > 0.4 * EnteredData.Td); //условие прохождения перерасчета (выполняется до тех пор, пока значение перестанет ему соответствовать)
 
 
             if (EnteredData.Cilinder) //выбор дальнейшего расчета по цилиндрической детали
@@ -103,7 +110,7 @@ namespace bescentovoe_shlifovanie
 
                         EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2))));
 
-                    } while (EnteredData.Epsilon >= 0.4 * EnteredData.Td);
+                    } while (EnteredData.Epsilon > 0.4 * EnteredData.Td);
 
                    
                     EnteredData.n = Math.Round((EnteredData.z / EnteredData.Svr), MidpointRounding.AwayFromZero);
