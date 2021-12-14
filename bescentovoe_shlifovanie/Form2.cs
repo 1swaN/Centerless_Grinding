@@ -36,16 +36,23 @@ namespace bescentovoe_shlifovanie
             output_text.Text += $"Присваиваем дробной части отношения b/c величину {EnteredData.b_c}" + Environment.NewLine;
 
             EnteredData.Dv += 0.1; //Задаем рациональное значение диаметра ведущего круга для правки
-
+                                                                                                            //0.0998
             EnteredData.h = Math.Round(0.5 * EnteredData.k * (EnteredData.Dv + EnteredData.d) * Math.Sin(Math.Atan(EnteredData.f1)), MidpointRounding.AwayFromZero); //Величина превышения центра заготовки    
 
             EnteredData.Alpha = Math.Round(EnteredData.k1*Math.Atan(EnteredData.f1 / EnteredData.f2), 2); //Величина угла скоса опорного ножа (округляем угол скоса до сотых)
 
             EnteredData.Svr = EnteredData.t / Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3); //Рациональное значение врезной подачи
 
-            EnteredData.h1 = EnteredData.h - ((EnteredData.d3 - EnteredData.d) / 2) * (1 - Math.Sin(EnteredData.Alpha)); //величина превышения оси детали над плоскость расположения осей абразивных кругов после окончания обработки
-            
-            EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2)))); //вычисление погрешности размера по диаметру детали
+            EnteredData.h1 = EnteredData.h - ((EnteredData.d3 - EnteredData.d) / 2) * (1 - Math.Sin(EnteredData.Alpha)); //величина превышения оси детали над плоскостью расположения осей абразивных кругов после окончания обработки
+
+            //неизвестный баг с расчетом. Думаю, ошибка не у меня
+            EnteredData.Epsilon1 =  Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2)));
+
+            EnteredData.Epsilon2 = Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2)));
+
+            EnteredData.Epsilon = (EnteredData.Epsilon1 - EnteredData.Epsilon2) * 2;
+
+            //EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2)))); //вычисление погрешности размера по диаметру детали
 
 
             while (EnteredData.Epsilon > 0.4 * EnteredData.Td)
