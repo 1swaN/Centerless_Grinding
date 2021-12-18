@@ -31,29 +31,23 @@ namespace bescentovoe_shlifovanie
             EnteredData.d03 *= 0.001;
             EnteredData.d04 *= 0.001;
             EnteredData.Ra *= 0.001;
+            //перевод м/мин в м/с
+            EnteredData.Vg = EnteredData.Vg / 60;
 
             //Расчеты
             output_text.Text += $"Присваиваем дробной части отношения b/c величину {EnteredData.b_c}" + Environment.NewLine;
 
             EnteredData.Dv += 0.1; //Задаем рациональное значение диаметра ведущего круга для правки
-                                                                                                            //0.0998
+                                                                                                           
             EnteredData.h = Math.Round(0.5 * EnteredData.k * (EnteredData.Dv + EnteredData.d) * Math.Sin(Math.Atan(EnteredData.f1)), MidpointRounding.AwayFromZero); //Величина превышения центра заготовки    
 
             EnteredData.Alpha = Math.Round(EnteredData.k1*Math.Atan(EnteredData.f1 / EnteredData.f2), 2); //Величина угла скоса опорного ножа (округляем угол скоса до сотых)
 
             EnteredData.Svr = EnteredData.t / Math.Pow(Math.Cos(Math.Asin(EnteredData.h / (EnteredData.Dv + EnteredData.d3))), 3); //Рациональное значение врезной подачи
 
-            EnteredData.h1 = EnteredData.h - ((EnteredData.d3 - EnteredData.d) / 2) * (1 - Math.Sin(EnteredData.Alpha)); //величина превышения оси детали над плоскостью расположения осей абразивных кругов после окончания обработки
+            EnteredData.h1 = EnteredData.h - ((EnteredData.d3 - EnteredData.d) / 2) * (1 - Math.Sin(EnteredData.Alpha)); //величина превышения оси детали над плоскостью расположения осей абразивных кругов после окончания обработки 
 
-            //неизвестный баг с расчетом. Думаю, ошибка не у меня
-            EnteredData.Epsilon1 =  Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2)));
-
-            EnteredData.Epsilon2 = Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2)));
-
-            EnteredData.Epsilon = (EnteredData.Epsilon1 - EnteredData.Epsilon2) * 2;
-
-            //EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2)))); //вычисление погрешности размера по диаметру детали
-
+            EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2)))); //вычисление погрешности размера по диаметру детали
 
             while (EnteredData.Epsilon > 0.4 * EnteredData.Td)
             {
@@ -63,15 +57,6 @@ namespace bescentovoe_shlifovanie
 
                 EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2)))); //перерасчет погрешности размера с учетом ранее перерасчитанных значений
             }
-
-
-            //do
-            //{
-            //    //пока условие в while истинно, будет выполняться перерасчет (если оно не истинно, то расчет идет далее, пропуская перерасчет):
-
-                
-
-            //} while (EnteredData.Epsilon > 0.4 * EnteredData.Td); //условие прохождения перерасчета (выполняется до тех пор, пока значение перестанет ему соответствовать)
 
 
             if (EnteredData.Cilinder) //выбор дальнейшего расчета по цилиндрической детали
@@ -108,18 +93,17 @@ namespace bescentovoe_shlifovanie
                     EnteredData.h1 = EnteredData.h - ((EnteredData.d3 - EnteredData.d) / 2) * (1 - Math.Sin(EnteredData.Alpha));
 
                     EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2))));
-                    
-                    do
+
+                    while (EnteredData.Epsilon > 0.4 * EnteredData.Td)
                     {
-                        EnteredData.Alpha *= 0.9;
+                        EnteredData.Alpha *= 0.9; //перерасчет размерности угла скоса опорного ножа
 
-                        EnteredData.h1 = EnteredData.h - ((EnteredData.d3 - EnteredData.d) / 2) * (1 - Math.Sin(EnteredData.Alpha));
+                        EnteredData.h1 = EnteredData.h - ((EnteredData.d3 - EnteredData.d) / 2) * (1 - Math.Sin(EnteredData.Alpha)); //перерасчет величины превышения оси с учетом ного значения угла скоса
 
-                        EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2))));
+                        EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2)))); //перерасчет погрешности размера с учетом ранее перерасчитанных значений
+                    }
 
-                    } while (EnteredData.Epsilon > 0.4 * EnteredData.Td);
 
-                   
                     EnteredData.n = Math.Round((EnteredData.z / EnteredData.Svr), MidpointRounding.AwayFromZero);
 
                     for (int i = 1; i < EnteredData.n; i++)

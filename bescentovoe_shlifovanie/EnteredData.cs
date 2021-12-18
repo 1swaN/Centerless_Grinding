@@ -54,9 +54,6 @@ namespace bescentovoe_shlifovanie
         public static double h1 { get; set; }
         public static double Epsilon { get; set; }
 
-        public static double Epsilon1 { get; set; }
-        public static double Epsilon2 { get; set; }
-
         public static bool Cilinder { get; set; }
         public static bool Sfera { get; set; }
         public static bool EmptySfera { get; set; }

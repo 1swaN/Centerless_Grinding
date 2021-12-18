@@ -228,7 +228,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(20, 313);
+            this.label13.Location = new System.Drawing.Point(20, 309);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(28, 16);
             this.label13.TabIndex = 12;
@@ -238,7 +238,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(149, 313);
+            this.label14.Location = new System.Drawing.Point(150, 307);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(29, 16);
             this.label14.TabIndex = 13;
@@ -248,7 +248,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(20, 342);
+            this.label15.Location = new System.Drawing.Point(20, 338);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(303, 16);
             this.label15.TabIndex = 14;
@@ -278,7 +278,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(20, 410);
+            this.label18.Location = new System.Drawing.Point(20, 405);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(28, 16);
             this.label18.TabIndex = 17;
@@ -288,7 +288,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(149, 409);
+            this.label19.Location = new System.Drawing.Point(149, 404);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(29, 16);
             this.label19.TabIndex = 18;
@@ -504,7 +504,7 @@ namespace bescentovoe_shlifovanie
             // d03_text
             // 
             this.d03_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.d03_text.Location = new System.Drawing.Point(57, 305);
+            this.d03_text.Location = new System.Drawing.Point(57, 301);
             this.d03_text.Name = "d03_text";
             this.d03_text.Size = new System.Drawing.Size(63, 24);
             this.d03_text.TabIndex = 44;
@@ -520,9 +520,9 @@ namespace bescentovoe_shlifovanie
             // d04_text
             // 
             this.d04_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.d04_text.Location = new System.Drawing.Point(184, 307);
+            this.d04_text.Location = new System.Drawing.Point(185, 301);
             this.d04_text.Name = "d04_text";
-            this.d04_text.Size = new System.Drawing.Size(60, 24);
+            this.d04_text.Size = new System.Drawing.Size(59, 24);
             this.d04_text.TabIndex = 46;
             // 
             // z01_text
@@ -536,7 +536,7 @@ namespace bescentovoe_shlifovanie
             // z03_text
             // 
             this.z03_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.z03_text.Location = new System.Drawing.Point(58, 403);
+            this.z03_text.Location = new System.Drawing.Point(58, 398);
             this.z03_text.Name = "z03_text";
             this.z03_text.Size = new System.Drawing.Size(62, 24);
             this.z03_text.TabIndex = 48;
@@ -552,7 +552,7 @@ namespace bescentovoe_shlifovanie
             // z04_text
             // 
             this.z04_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.z04_text.Location = new System.Drawing.Point(184, 403);
+            this.z04_text.Location = new System.Drawing.Point(184, 398);
             this.z04_text.Name = "z04_text";
             this.z04_text.Size = new System.Drawing.Size(60, 24);
             this.z04_text.TabIndex = 50;
@@ -728,14 +728,14 @@ namespace bescentovoe_shlifovanie
             this.label22.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label22.Location = new System.Drawing.Point(427, 706);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(42, 16);
+            this.label22.Size = new System.Drawing.Size(67, 16);
             this.label22.TabIndex = 71;
-            this.label22.Text = "Δпрод";
+            this.label22.Text = "Δпрод, мм";
             // 
             // delta_prod_text
             // 
             this.delta_prod_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.delta_prod_text.Location = new System.Drawing.Point(475, 702);
+            this.delta_prod_text.Location = new System.Drawing.Point(498, 702);
             this.delta_prod_text.Name = "delta_prod_text";
             this.delta_prod_text.Size = new System.Drawing.Size(64, 24);
             this.delta_prod_text.TabIndex = 72;
@@ -764,9 +764,9 @@ namespace bescentovoe_shlifovanie
             this.label37.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label37.Location = new System.Drawing.Point(20, 617);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(224, 16);
+            this.label37.Size = new System.Drawing.Size(240, 16);
             this.label37.TabIndex = 75;
-            this.label37.Text = "Скорость ведущего круга Vд, м/с";
+            this.label37.Text = "Скорость ведущего круга Vд, м/мин";
             // 
             // Vg_text
             // 
