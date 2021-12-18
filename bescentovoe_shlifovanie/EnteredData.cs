@@ -82,5 +82,8 @@ namespace bescentovoe_shlifovanie
         public static double Vkr { get; set; }
         public static double Vg { get; set; }
         public static double Bkr { get; set; }
+
+        //переменная проверки
+        public static int Check = 0;
     }
 }

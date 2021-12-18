@@ -13,7 +13,6 @@ namespace bescentovoe_shlifovanie
     public partial class Form2 : Form
     {  
         //массивы данных d0i и z0i
-
         public  double[] z0 = new double[4] { EnteredData.z01, EnteredData.z02, EnteredData.z03, EnteredData.z04 };
         public  double[] d0 = new double[4] { EnteredData.d04, EnteredData.d03, EnteredData.d02, EnteredData.d01 };
         public Form2()
@@ -128,7 +127,6 @@ namespace bescentovoe_shlifovanie
                 } while (EnteredData.delta_Prod > EnteredData.delta_prod); //условие, при котором необходимо пересчитывать бочкообразность
 
                 EnteredData.A = (EnteredData.Dsh * EnteredData.d) / (EnteredData.Dsh + EnteredData.d); //вычисление параметра А
-                
 
                 EnteredData.H0 = 0.2 * d0[0]; //вычисление параметра Н0
                 EnteredData.S = 0.66 * EnteredData.Bkr;
@@ -139,7 +137,11 @@ namespace bescentovoe_shlifovanie
                     for (int i = 1; i < 4; i++) //цикл перерасчета
                     {
                         EnteredData.S *= 0.9; 
-                        EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(d0[i], 0.14) / z0[i] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))));
+                        EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(d0[i], 0.14) / z0[i] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))));           
+                    }
+                    if (++EnteredData.Check > 3) //выход из цикла при превышении кол-ва итераций перерасчета
+                    {
+                        break;
                     }
                 }
                 //вывод параметров
@@ -151,7 +153,6 @@ namespace bescentovoe_shlifovanie
                 output_text.Text += $"Рациональное значение врезной подачи равно {EnteredData.Svr}" + Environment.NewLine;
                 output_text.Text += $"Задаем рациональное значение диаметра ведущего круга для правки в размере {EnteredData.Dv}" + Environment.NewLine;
                 output_text.Text += $"Подача {EnteredData.S}" + Environment.NewLine;
-
             }
 
             else if (EnteredData.Sfera) //выбор расчета сферы
@@ -213,11 +214,18 @@ namespace bescentovoe_shlifovanie
                 
                 EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(d0[0], 0.289) * 1) / (EnteredData.L * z0[0])), 0.257) * 0.001; //Расчет параметра шероховатости Ra при врезном шлифовании (cos B = 1)
 
-                for (int i = 1; i < 4; i++)
+
+                while (EnteredData.RA > EnteredData.Ra)
                 {
-                    while (EnteredData.RA > EnteredData.Ra)
+                    
+                    for (int i = 1; i < 4; i++)
                     {
                         EnteredData.RA = 0.196 * Math.Pow(((Math.Pow(d0[i], 0.289) * 1) / (EnteredData.L * z0[i])), 0.257) * 0.001;
+                    }
+
+                    if (++EnteredData.Check > 3)
+                    {
+                        break;
                     }
                 }
                 EnteredData.n3 = EnteredData.Nv * (EnteredData.Dv / EnteredData.d3); // Частота вращения заготовки
