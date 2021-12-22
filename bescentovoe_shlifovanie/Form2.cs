@@ -29,7 +29,6 @@ namespace bescentovoe_shlifovanie
             EnteredData.d02 *= 0.001;
             EnteredData.d03 *= 0.001;
             EnteredData.d04 *= 0.001;
-            EnteredData.Ra *= 0.001;
             //перевод м/мин в м/с
             EnteredData.Vg = EnteredData.Vg / 60;
 
@@ -46,7 +45,7 @@ namespace bescentovoe_shlifovanie
 
             EnteredData.h1 = EnteredData.h - ((EnteredData.d3 - EnteredData.d) / 2) * (1 - Math.Sin(EnteredData.Alpha)); //величина превышения оси детали над плоскостью расположения осей абразивных кругов после окончания обработки 
 
-            EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2)))); //вычисление погрешности размера по диаметру детали
+            EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * ((Math.Pow(EnteredData.d, 2)) / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2)))); //вычисление погрешности размера по диаметру детали
 
             while (EnteredData.Epsilon > 0.4 * EnteredData.Td)
             {
@@ -54,7 +53,7 @@ namespace bescentovoe_shlifovanie
 
                 EnteredData.h1 = EnteredData.h - ((EnteredData.d3 - EnteredData.d) / 2) * (1 - Math.Sin(EnteredData.Alpha)); //перерасчет величины превышения оси с учетом ного значения угла скоса
 
-                EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2)))); //перерасчет погрешности размера с учетом ранее перерасчитанных значений
+                EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * ((Math.Pow(EnteredData.d, 2)) / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2)))); //перерасчет погрешности размера с учетом ранее перерасчитанных значений
             }
 
 
@@ -91,7 +90,7 @@ namespace bescentovoe_shlifovanie
                     
                     EnteredData.h1 = EnteredData.h - ((EnteredData.d3 - EnteredData.d) / 2) * (1 - Math.Sin(EnteredData.Alpha));
 
-                    EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2))));
+                    EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * ((Math.Pow(EnteredData.d, 2)) / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2))));
 
                     while (EnteredData.Epsilon > 0.4 * EnteredData.Td)
                     {
@@ -99,7 +98,7 @@ namespace bescentovoe_shlifovanie
 
                         EnteredData.h1 = EnteredData.h - ((EnteredData.d3 - EnteredData.d) / 2) * (1 - Math.Sin(EnteredData.Alpha)); //перерасчет величины превышения оси с учетом ного значения угла скоса
 
-                        EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * (1 / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2)))); //перерасчет погрешности размера с учетом ранее перерасчитанных значений
+                        EnteredData.Epsilon = 2 * (Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h1, 2) * ((Math.Pow(EnteredData.d, 2)) / Math.Pow((EnteredData.d + EnteredData.Dv), 2))) - Math.Sqrt((Math.Pow(EnteredData.d, 2) / 4) - Math.Pow(EnteredData.h, 2) * (Math.Pow(EnteredData.d3, 2) / Math.Pow((EnteredData.d3 + EnteredData.Dv), 2)))); //перерасчет погрешности размера с учетом ранее перерасчитанных значений
                     }
 
 
