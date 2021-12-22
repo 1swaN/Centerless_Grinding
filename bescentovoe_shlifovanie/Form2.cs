@@ -129,14 +129,14 @@ namespace bescentovoe_shlifovanie
 
                 EnteredData.H0 = 0.2 * d0[0]; //вычисление параметра Н0
                 EnteredData.S = 0.66 * EnteredData.Bkr;
-                EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(d0[0], 0.14) / z0[0] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A)))); //вычисление парметра Ra 
+                EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9)) * EnteredData.S * EnteredData.t * (Math.Pow(d0[0], 0.14)) / (z0[0] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))); //вычисление парметра Ra 
 
                 while (EnteredData.RA > EnteredData.Ra) //сравнение вычисленного парметра шероховатости с допустимым
                 {
                     for (int i = 1; i < 4; i++) //цикл перерасчета
                     {
                         EnteredData.S *= 0.9; 
-                        EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9) * EnteredData.S * EnteredData.t * (Math.Pow(d0[i], 0.14) / z0[i] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A))));           
+                        EnteredData.RA = 0.206 * ((Math.Pow(EnteredData.H0, 2.9)) * EnteredData.S * EnteredData.t * (Math.Pow(d0[0], 0.14)) / (z0[0] * (EnteredData.Vkr / EnteredData.Vg) * EnteredData.Bkr * Math.Sqrt(EnteredData.A)));           
                     }
                     if (++EnteredData.Check > 3) //выход из цикла при превышении кол-ва итераций перерасчета
                     {
