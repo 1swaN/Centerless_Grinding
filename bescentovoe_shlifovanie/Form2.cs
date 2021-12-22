@@ -80,7 +80,7 @@ namespace bescentovoe_shlifovanie
 
                 EnteredData.x1 = 0.1 * EnteredData.l; //расчет параметра х1
                 EnteredData.x2 = EnteredData.l / 2; //расчет параметра х2
-                EnteredData.delta_Prod = EnteredData.t * (Math.Pow((EnteredData.l / EnteredData.x1), 0.21) - Math.Pow((EnteredData.l - EnteredData.x2), 0.21)); //расчет параметра бочкообразности
+                EnteredData.delta_Prod = EnteredData.t * (Math.Pow((EnteredData.l / EnteredData.x1), 0.21) - Math.Pow((EnteredData.l / EnteredData.x2), 0.21)); //расчет параметра бочкообразности
 
                 do //блок перерасчета значения бочкообразности
                 {
@@ -121,7 +121,7 @@ namespace bescentovoe_shlifovanie
 
                     EnteredData.x1 = 0.1 * EnteredData.l;
                     EnteredData.x2 = EnteredData.l / 2;
-                    EnteredData.delta_Prod = EnteredData.t * (Math.Pow((EnteredData.l / EnteredData.x1), 0.21) - Math.Pow((EnteredData.l - EnteredData.x2), 0.21));  
+                    EnteredData.delta_Prod = EnteredData.t * (Math.Pow((EnteredData.l / EnteredData.x1), 0.21) - Math.Pow((EnteredData.l / EnteredData.x2), 0.21));  
 
                 } while (EnteredData.delta_Prod > EnteredData.delta_prod); //условие, при котором необходимо пересчитывать бочкообразность
 
