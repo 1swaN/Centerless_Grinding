@@ -33,7 +33,7 @@ namespace bescentovoe_shlifovanie
             EnteredData.Vg = EnteredData.Vg / 60;
 
             //Расчеты
-            output_text.Text += $"Присваиваем дробной части отношения b/c величину {EnteredData.b_c}" + Environment.NewLine;
+            //output_text.Text += $"Присваиваем дробной части отношения b/c величину {EnteredData.b_c}" + Environment.NewLine;
 
             EnteredData.Dv += 0.1; //Задаем рациональное значение диаметра ведущего круга для правки
                                                                                                            
