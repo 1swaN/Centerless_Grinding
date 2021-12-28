@@ -6,4 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MetroSet_UI" Version="2.0.0" />
+  </ItemGroup>
+
 </Project>

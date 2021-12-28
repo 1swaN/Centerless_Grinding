@@ -318,7 +318,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label24.Location = new System.Drawing.Point(617, 300);
+            this.label24.Location = new System.Drawing.Point(617, 308);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(0, 16);
             this.label24.TabIndex = 23;
@@ -654,7 +654,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label28.Location = new System.Drawing.Point(542, 289);
+            this.label28.Location = new System.Drawing.Point(542, 297);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(82, 16);
             this.label28.TabIndex = 66;
@@ -665,7 +665,7 @@ namespace bescentovoe_shlifovanie
             this.sfera_radioButton.AutoSize = true;
             this.sfera_radioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sfera_radioButton.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.sfera_radioButton.Location = new System.Drawing.Point(542, 338);
+            this.sfera_radioButton.Location = new System.Drawing.Point(542, 346);
             this.sfera_radioButton.Name = "sfera_radioButton";
             this.sfera_radioButton.Size = new System.Drawing.Size(103, 20);
             this.sfera_radioButton.TabIndex = 65;
@@ -678,7 +678,7 @@ namespace bescentovoe_shlifovanie
             this.cilinder_radioButton.AutoSize = true;
             this.cilinder_radioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cilinder_radioButton.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.cilinder_radioButton.Location = new System.Drawing.Point(542, 313);
+            this.cilinder_radioButton.Location = new System.Drawing.Point(542, 321);
             this.cilinder_radioButton.Name = "cilinder_radioButton";
             this.cilinder_radioButton.Size = new System.Drawing.Size(124, 20);
             this.cilinder_radioButton.TabIndex = 64;
@@ -744,7 +744,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label36.Location = new System.Drawing.Point(20, 594);
+            this.label36.Location = new System.Drawing.Point(20, 595);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(338, 16);
             this.label36.TabIndex = 73;
@@ -762,7 +762,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label37.Location = new System.Drawing.Point(20, 617);
+            this.label37.Location = new System.Drawing.Point(20, 619);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(240, 16);
             this.label37.TabIndex = 75;
@@ -780,7 +780,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label38.Location = new System.Drawing.Point(20, 640);
+            this.label38.Location = new System.Drawing.Point(20, 642);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(146, 16);
             this.label38.TabIndex = 77;
