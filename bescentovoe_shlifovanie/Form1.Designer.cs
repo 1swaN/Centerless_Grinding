@@ -440,7 +440,7 @@ namespace bescentovoe_shlifovanie
             // Dv_text
             // 
             this.Dv_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Dv_text.Location = new System.Drawing.Point(579, 59);
+            this.Dv_text.Location = new System.Drawing.Point(579, 61);
             this.Dv_text.Name = "Dv_text";
             this.Dv_text.Size = new System.Drawing.Size(75, 23);
             this.Dv_text.TabIndex = 36;
@@ -448,7 +448,7 @@ namespace bescentovoe_shlifovanie
             // Dsh_text
             // 
             this.Dsh_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Dsh_text.Location = new System.Drawing.Point(579, 84);
+            this.Dsh_text.Location = new System.Drawing.Point(579, 86);
             this.Dsh_text.Name = "Dsh_text";
             this.Dsh_text.Size = new System.Drawing.Size(75, 23);
             this.Dsh_text.TabIndex = 37;
@@ -456,7 +456,7 @@ namespace bescentovoe_shlifovanie
             // d_text
             // 
             this.d_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.d_text.Location = new System.Drawing.Point(579, 109);
+            this.d_text.Location = new System.Drawing.Point(579, 111);
             this.d_text.Name = "d_text";
             this.d_text.Size = new System.Drawing.Size(75, 23);
             this.d_text.TabIndex = 38;
@@ -464,7 +464,7 @@ namespace bescentovoe_shlifovanie
             // d3_text
             // 
             this.d3_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.d3_text.Location = new System.Drawing.Point(579, 134);
+            this.d3_text.Location = new System.Drawing.Point(579, 136);
             this.d3_text.Name = "d3_text";
             this.d3_text.Size = new System.Drawing.Size(75, 23);
             this.d3_text.TabIndex = 39;
@@ -472,7 +472,7 @@ namespace bescentovoe_shlifovanie
             // t_text
             // 
             this.t_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.t_text.Location = new System.Drawing.Point(579, 159);
+            this.t_text.Location = new System.Drawing.Point(579, 161);
             this.t_text.Name = "t_text";
             this.t_text.Size = new System.Drawing.Size(75, 23);
             this.t_text.TabIndex = 40;
@@ -480,7 +480,7 @@ namespace bescentovoe_shlifovanie
             // f1_text
             // 
             this.f1_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.f1_text.Location = new System.Drawing.Point(579, 184);
+            this.f1_text.Location = new System.Drawing.Point(579, 186);
             this.f1_text.Name = "f1_text";
             this.f1_text.Size = new System.Drawing.Size(75, 23);
             this.f1_text.TabIndex = 41;
@@ -488,7 +488,7 @@ namespace bescentovoe_shlifovanie
             // f2_text
             // 
             this.f2_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.f2_text.Location = new System.Drawing.Point(579, 209);
+            this.f2_text.Location = new System.Drawing.Point(579, 211);
             this.f2_text.Name = "f2_text";
             this.f2_text.Size = new System.Drawing.Size(75, 23);
             this.f2_text.TabIndex = 42;
