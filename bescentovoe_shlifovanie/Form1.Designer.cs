@@ -149,7 +149,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(20, 142);
+            this.label5.Location = new System.Drawing.Point(20, 141);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(191, 18);
             this.label5.TabIndex = 4;
@@ -238,7 +238,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(149, 301);
+            this.label14.Location = new System.Drawing.Point(148, 301);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(32, 18);
             this.label14.TabIndex = 13;
@@ -268,7 +268,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(149, 354);
+            this.label17.Location = new System.Drawing.Point(148, 354);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(31, 18);
             this.label17.TabIndex = 16;
@@ -288,7 +288,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(149, 378);
+            this.label19.Location = new System.Drawing.Point(148, 378);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(31, 18);
             this.label19.TabIndex = 18;
@@ -318,7 +318,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label24.Location = new System.Drawing.Point(599, 311);
+            this.label24.Location = new System.Drawing.Point(598, 312);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(0, 16);
             this.label24.TabIndex = 23;
@@ -418,8 +418,9 @@ namespace bescentovoe_shlifovanie
             this.count_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.count_button.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.count_button.Location = new System.Drawing.Point(482, 749);
+            this.count_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.count_button.Name = "count_button";
-            this.count_button.Size = new System.Drawing.Size(89, 32);
+            this.count_button.Size = new System.Drawing.Size(89, 31);
             this.count_button.TabIndex = 34;
             this.count_button.Text = "К расчету";
             this.count_button.UseVisualStyleBackColor = true;
@@ -430,8 +431,9 @@ namespace bescentovoe_shlifovanie
             this.Exit_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Exit_button.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Exit_button.Location = new System.Drawing.Point(579, 749);
+            this.Exit_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Exit_button.Name = "Exit_button";
-            this.Exit_button.Size = new System.Drawing.Size(75, 32);
+            this.Exit_button.Size = new System.Drawing.Size(75, 31);
             this.Exit_button.TabIndex = 35;
             this.Exit_button.Text = "Выход";
             this.Exit_button.UseVisualStyleBackColor = true;
@@ -441,6 +443,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.Dv_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Dv_text.Location = new System.Drawing.Point(579, 61);
+            this.Dv_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Dv_text.Name = "Dv_text";
             this.Dv_text.Size = new System.Drawing.Size(75, 23);
             this.Dv_text.TabIndex = 36;
@@ -449,6 +452,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.Dsh_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Dsh_text.Location = new System.Drawing.Point(579, 86);
+            this.Dsh_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Dsh_text.Name = "Dsh_text";
             this.Dsh_text.Size = new System.Drawing.Size(75, 23);
             this.Dsh_text.TabIndex = 37;
@@ -457,6 +461,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.d_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.d_text.Location = new System.Drawing.Point(579, 111);
+            this.d_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.d_text.Name = "d_text";
             this.d_text.Size = new System.Drawing.Size(75, 23);
             this.d_text.TabIndex = 38;
@@ -464,7 +469,8 @@ namespace bescentovoe_shlifovanie
             // d3_text
             // 
             this.d3_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.d3_text.Location = new System.Drawing.Point(579, 136);
+            this.d3_text.Location = new System.Drawing.Point(579, 137);
+            this.d3_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.d3_text.Name = "d3_text";
             this.d3_text.Size = new System.Drawing.Size(75, 23);
             this.d3_text.TabIndex = 39;
@@ -473,6 +479,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.t_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.t_text.Location = new System.Drawing.Point(579, 161);
+            this.t_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.t_text.Name = "t_text";
             this.t_text.Size = new System.Drawing.Size(75, 23);
             this.t_text.TabIndex = 40;
@@ -481,6 +488,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.f1_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.f1_text.Location = new System.Drawing.Point(579, 186);
+            this.f1_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.f1_text.Name = "f1_text";
             this.f1_text.Size = new System.Drawing.Size(75, 23);
             this.f1_text.TabIndex = 41;
@@ -489,6 +497,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.f2_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.f2_text.Location = new System.Drawing.Point(579, 211);
+            this.f2_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.f2_text.Name = "f2_text";
             this.f2_text.Size = new System.Drawing.Size(75, 23);
             this.f2_text.TabIndex = 42;
@@ -497,22 +506,25 @@ namespace bescentovoe_shlifovanie
             // 
             this.d01_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.d01_text.Location = new System.Drawing.Point(57, 272);
+            this.d01_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.d01_text.Name = "d01_text";
-            this.d01_text.Size = new System.Drawing.Size(63, 23);
+            this.d01_text.Size = new System.Drawing.Size(62, 23);
             this.d01_text.TabIndex = 43;
             // 
             // d03_text
             // 
             this.d03_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.d03_text.Location = new System.Drawing.Point(57, 297);
+            this.d03_text.Location = new System.Drawing.Point(57, 298);
+            this.d03_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.d03_text.Name = "d03_text";
-            this.d03_text.Size = new System.Drawing.Size(63, 23);
+            this.d03_text.Size = new System.Drawing.Size(62, 23);
             this.d03_text.TabIndex = 44;
             // 
             // d02_text
             // 
             this.d02_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.d02_text.Location = new System.Drawing.Point(185, 272);
+            this.d02_text.Location = new System.Drawing.Point(184, 272);
+            this.d02_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.d02_text.Name = "d02_text";
             this.d02_text.Size = new System.Drawing.Size(59, 23);
             this.d02_text.TabIndex = 45;
@@ -520,7 +532,8 @@ namespace bescentovoe_shlifovanie
             // d04_text
             // 
             this.d04_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.d04_text.Location = new System.Drawing.Point(185, 297);
+            this.d04_text.Location = new System.Drawing.Point(184, 298);
+            this.d04_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.d04_text.Name = "d04_text";
             this.d04_text.Size = new System.Drawing.Size(59, 23);
             this.d04_text.TabIndex = 46;
@@ -529,6 +542,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.z01_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.z01_text.Location = new System.Drawing.Point(58, 350);
+            this.z01_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.z01_text.Name = "z01_text";
             this.z01_text.Size = new System.Drawing.Size(62, 23);
             this.z01_text.TabIndex = 47;
@@ -536,7 +550,8 @@ namespace bescentovoe_shlifovanie
             // z03_text
             // 
             this.z03_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.z03_text.Location = new System.Drawing.Point(58, 375);
+            this.z03_text.Location = new System.Drawing.Point(58, 374);
+            this.z03_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.z03_text.Name = "z03_text";
             this.z03_text.Size = new System.Drawing.Size(62, 23);
             this.z03_text.TabIndex = 48;
@@ -545,6 +560,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.z02_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.z02_text.Location = new System.Drawing.Point(184, 350);
+            this.z02_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.z02_text.Name = "z02_text";
             this.z02_text.Size = new System.Drawing.Size(60, 23);
             this.z02_text.TabIndex = 49;
@@ -552,7 +568,8 @@ namespace bescentovoe_shlifovanie
             // z04_text
             // 
             this.z04_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.z04_text.Location = new System.Drawing.Point(184, 375);
+            this.z04_text.Location = new System.Drawing.Point(184, 374);
+            this.z04_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.z04_text.Name = "z04_text";
             this.z04_text.Size = new System.Drawing.Size(60, 23);
             this.z04_text.TabIndex = 50;
@@ -560,7 +577,8 @@ namespace bescentovoe_shlifovanie
             // k_text
             // 
             this.k_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.k_text.Location = new System.Drawing.Point(579, 430);
+            this.k_text.Location = new System.Drawing.Point(579, 431);
+            this.k_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.k_text.Name = "k_text";
             this.k_text.Size = new System.Drawing.Size(75, 23);
             this.k_text.TabIndex = 52;
@@ -569,6 +587,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.R3_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.R3_text.Location = new System.Drawing.Point(579, 455);
+            this.R3_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.R3_text.Name = "R3_text";
             this.R3_text.Size = new System.Drawing.Size(75, 23);
             this.R3_text.TabIndex = 54;
@@ -576,7 +595,8 @@ namespace bescentovoe_shlifovanie
             // z_text
             // 
             this.z_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.z_text.Location = new System.Drawing.Point(579, 480);
+            this.z_text.Location = new System.Drawing.Point(579, 479);
+            this.z_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.z_text.Name = "z_text";
             this.z_text.Size = new System.Drawing.Size(75, 23);
             this.z_text.TabIndex = 55;
@@ -585,6 +605,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.nv_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.nv_text.Location = new System.Drawing.Point(579, 505);
+            this.nv_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nv_text.Name = "nv_text";
             this.nv_text.Size = new System.Drawing.Size(75, 23);
             this.nv_text.TabIndex = 56;
@@ -592,7 +613,8 @@ namespace bescentovoe_shlifovanie
             // Td_text
             // 
             this.Td_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Td_text.Location = new System.Drawing.Point(579, 530);
+            this.Td_text.Location = new System.Drawing.Point(579, 531);
+            this.Td_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Td_text.Name = "Td_text";
             this.Td_text.Size = new System.Drawing.Size(75, 23);
             this.Td_text.TabIndex = 57;
@@ -601,6 +623,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.Ra_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Ra_text.Location = new System.Drawing.Point(82, 670);
+            this.Ra_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Ra_text.Name = "Ra_text";
             this.Ra_text.Size = new System.Drawing.Size(58, 23);
             this.Ra_text.TabIndex = 58;
@@ -608,7 +631,8 @@ namespace bescentovoe_shlifovanie
             // delta_kr_text
             // 
             this.delta_kr_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.delta_kr_text.Location = new System.Drawing.Point(82, 698);
+            this.delta_kr_text.Location = new System.Drawing.Point(82, 699);
+            this.delta_kr_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.delta_kr_text.Name = "delta_kr_text";
             this.delta_kr_text.Size = new System.Drawing.Size(58, 23);
             this.delta_kr_text.TabIndex = 59;
@@ -616,7 +640,8 @@ namespace bescentovoe_shlifovanie
             // delta_sf_text
             // 
             this.delta_sf_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.delta_sf_text.Location = new System.Drawing.Point(228, 669);
+            this.delta_sf_text.Location = new System.Drawing.Point(228, 668);
+            this.delta_sf_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.delta_sf_text.Name = "delta_sf_text";
             this.delta_sf_text.Size = new System.Drawing.Size(59, 23);
             this.delta_sf_text.TabIndex = 60;
@@ -624,7 +649,8 @@ namespace bescentovoe_shlifovanie
             // delta_ogr_text
             // 
             this.delta_ogr_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.delta_ogr_text.Location = new System.Drawing.Point(228, 698);
+            this.delta_ogr_text.Location = new System.Drawing.Point(228, 699);
+            this.delta_ogr_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.delta_ogr_text.Name = "delta_ogr_text";
             this.delta_ogr_text.Size = new System.Drawing.Size(59, 23);
             this.delta_ogr_text.TabIndex = 61;
@@ -632,7 +658,8 @@ namespace bescentovoe_shlifovanie
             // delta_v_text
             // 
             this.delta_v_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.delta_v_text.Location = new System.Drawing.Point(364, 669);
+            this.delta_v_text.Location = new System.Drawing.Point(364, 668);
+            this.delta_v_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.delta_v_text.Name = "delta_v_text";
             this.delta_v_text.Size = new System.Drawing.Size(61, 23);
             this.delta_v_text.TabIndex = 62;
@@ -666,6 +693,7 @@ namespace bescentovoe_shlifovanie
             this.sfera_radioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sfera_radioButton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sfera_radioButton.Location = new System.Drawing.Point(524, 349);
+            this.sfera_radioButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sfera_radioButton.Name = "sfera_radioButton";
             this.sfera_radioButton.Size = new System.Drawing.Size(117, 22);
             this.sfera_radioButton.TabIndex = 65;
@@ -679,6 +707,7 @@ namespace bescentovoe_shlifovanie
             this.cilinder_radioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cilinder_radioButton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cilinder_radioButton.Location = new System.Drawing.Point(524, 324);
+            this.cilinder_radioButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cilinder_radioButton.Name = "cilinder_radioButton";
             this.cilinder_radioButton.Size = new System.Drawing.Size(138, 22);
             this.cilinder_radioButton.TabIndex = 64;
@@ -689,7 +718,8 @@ namespace bescentovoe_shlifovanie
             // delta_rb_text
             // 
             this.delta_rb_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.delta_rb_text.Location = new System.Drawing.Point(364, 698);
+            this.delta_rb_text.Location = new System.Drawing.Point(364, 699);
+            this.delta_rb_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.delta_rb_text.Name = "delta_rb_text";
             this.delta_rb_text.Size = new System.Drawing.Size(61, 23);
             this.delta_rb_text.TabIndex = 67;
@@ -719,6 +749,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.l_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.l_text.Location = new System.Drawing.Point(579, 405);
+            this.l_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.l_text.Name = "l_text";
             this.l_text.Size = new System.Drawing.Size(75, 23);
             this.l_text.TabIndex = 70;
@@ -728,7 +759,7 @@ namespace bescentovoe_shlifovanie
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.SystemColors.Control;
             this.label22.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label22.Location = new System.Drawing.Point(437, 671);
+            this.label22.Location = new System.Drawing.Point(436, 671);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(79, 18);
             this.label22.TabIndex = 71;
@@ -737,7 +768,8 @@ namespace bescentovoe_shlifovanie
             // delta_prod_text
             // 
             this.delta_prod_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.delta_prod_text.Location = new System.Drawing.Point(519, 669);
+            this.delta_prod_text.Location = new System.Drawing.Point(519, 668);
+            this.delta_prod_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.delta_prod_text.Name = "delta_prod_text";
             this.delta_prod_text.Size = new System.Drawing.Size(64, 23);
             this.delta_prod_text.TabIndex = 72;
@@ -756,6 +788,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.Vkr_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Vkr_text.Location = new System.Drawing.Point(579, 555);
+            this.Vkr_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Vkr_text.Name = "Vkr_text";
             this.Vkr_text.Size = new System.Drawing.Size(75, 23);
             this.Vkr_text.TabIndex = 74;
@@ -774,6 +807,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.Vg_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Vg_text.Location = new System.Drawing.Point(579, 580);
+            this.Vg_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Vg_text.Name = "Vg_text";
             this.Vg_text.Size = new System.Drawing.Size(75, 23);
             this.Vg_text.TabIndex = 76;
@@ -782,7 +816,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label38.Location = new System.Drawing.Point(20, 604);
+            this.label38.Location = new System.Drawing.Point(20, 603);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(163, 18);
             this.label38.TabIndex = 77;
@@ -791,17 +825,18 @@ namespace bescentovoe_shlifovanie
             // Bkr_text
             // 
             this.Bkr_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Bkr_text.Location = new System.Drawing.Point(579, 605);
+            this.Bkr_text.Location = new System.Drawing.Point(579, 606);
+            this.Bkr_text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Bkr_text.Name = "Bkr_text";
             this.Bkr_text.Size = new System.Drawing.Size(75, 23);
             this.Bkr_text.TabIndex = 78;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(685, 731);
+            this.ClientSize = new System.Drawing.Size(685, 732);
             this.Controls.Add(this.Bkr_text);
             this.Controls.Add(this.label38);
             this.Controls.Add(this.Vg_text);
@@ -876,10 +911,10 @@ namespace bescentovoe_shlifovanie
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(701, 770);
+            this.MaximumSize = new System.Drawing.Size(701, 771);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ввод параметров";
