@@ -108,80 +108,80 @@ namespace bescentovoe_shlifovanie
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("GOST type B", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(215, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 17);
+            this.label1.Size = new System.Drawing.Size(246, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Введите начальные данные";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(20, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(213, 16);
+            this.label2.Size = new System.Drawing.Size(235, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Диаметр ведущего круга Dв, мм";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(20, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(251, 16);
+            this.label3.Size = new System.Drawing.Size(282, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Диаметр шлифовального круга Dш, мм";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(20, 118);
+            this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(20, 117);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(241, 16);
+            this.label4.Size = new System.Drawing.Size(265, 18);
             this.label4.TabIndex = 3;
             this.label4.Text = "Диаметр обработанной детали d, мм";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(20, 142);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 16);
+            this.label5.Size = new System.Drawing.Size(191, 18);
             this.label5.TabIndex = 4;
             this.label5.Text = "Диаметр заготовки dз, мм";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(20, 166);
+            this.label6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(20, 167);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(148, 16);
+            this.label6.Size = new System.Drawing.Size(164, 18);
             this.label6.TabIndex = 5;
             this.label6.Text = "Глубина резания t, мм";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(20, 190);
+            this.label7.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(20, 191);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(343, 16);
+            this.label7.Size = new System.Drawing.Size(377, 18);
             this.label7.TabIndex = 6;
             this.label7.Text = "Коэффициент трения заготовки с опорным ножом f1";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(20, 215);
+            this.label8.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(20, 217);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(352, 16);
+            this.label8.Size = new System.Drawing.Size(381, 18);
             this.label8.TabIndex = 7;
             this.label8.Text = "Коэффициент трения заготовки с ведущим кругом f2";
             // 
@@ -197,120 +197,120 @@ namespace bescentovoe_shlifovanie
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label10.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.Location = new System.Drawing.Point(20, 252);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(279, 16);
+            this.label10.Size = new System.Drawing.Size(311, 18);
             this.label10.TabIndex = 9;
             this.label10.Text = "Диаметр зерен шлифовального круга, мкм:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(20, 278);
+            this.label11.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(19, 276);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(26, 16);
+            this.label11.Size = new System.Drawing.Size(32, 18);
             this.label11.TabIndex = 10;
             this.label11.Text = "d01";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(149, 278);
+            this.label12.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(148, 276);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(28, 16);
+            this.label12.Size = new System.Drawing.Size(32, 18);
             this.label12.TabIndex = 11;
             this.label12.Text = "d02";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(20, 309);
+            this.label13.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(19, 300);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(28, 16);
+            this.label13.Size = new System.Drawing.Size(32, 18);
             this.label13.TabIndex = 12;
             this.label13.Text = "d03";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(150, 307);
+            this.label14.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(149, 301);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(29, 16);
+            this.label14.Size = new System.Drawing.Size(32, 18);
             this.label14.TabIndex = 13;
             this.label14.Text = "d04";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(20, 338);
+            this.label15.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(20, 329);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(303, 16);
+            this.label15.Size = new System.Drawing.Size(336, 18);
             this.label15.TabIndex = 14;
             this.label15.Text = "Количество абразивных зерен на единице, шт:";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(20, 374);
+            this.label16.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(20, 354);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(26, 16);
+            this.label16.Size = new System.Drawing.Size(31, 18);
             this.label16.TabIndex = 15;
             this.label16.Text = "z01";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(149, 374);
+            this.label17.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label17.Location = new System.Drawing.Point(149, 354);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(28, 16);
+            this.label17.Size = new System.Drawing.Size(31, 18);
             this.label17.TabIndex = 16;
             this.label17.Text = "z02";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(20, 405);
+            this.label18.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label18.Location = new System.Drawing.Point(20, 378);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(28, 16);
+            this.label18.Size = new System.Drawing.Size(31, 18);
             this.label18.TabIndex = 17;
             this.label18.Text = "z03";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(149, 404);
+            this.label19.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label19.Location = new System.Drawing.Point(149, 378);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(29, 16);
+            this.label19.Size = new System.Drawing.Size(31, 18);
             this.label19.TabIndex = 18;
             this.label19.Text = "z04";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label21.Location = new System.Drawing.Point(20, 470);
+            this.label21.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label21.Location = new System.Drawing.Point(20, 432);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(253, 16);
+            this.label21.Size = new System.Drawing.Size(282, 18);
             this.label21.TabIndex = 20;
             this.label21.Text = "Коэффициент уменьшения k (0,5 - 0,7)";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label23.Location = new System.Drawing.Point(20, 496);
+            this.label23.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label23.Location = new System.Drawing.Point(20, 458);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(488, 16);
+            this.label23.Size = new System.Drawing.Size(539, 18);
             this.label23.TabIndex = 22;
             this.label23.Text = "Радиус округления вершин абразивных зерен шлифовального круга Rз, мкм";
             // 
@@ -318,7 +318,7 @@ namespace bescentovoe_shlifovanie
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label24.Location = new System.Drawing.Point(617, 308);
+            this.label24.Location = new System.Drawing.Point(599, 311);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(0, 16);
             this.label24.TabIndex = 23;
@@ -326,100 +326,100 @@ namespace bescentovoe_shlifovanie
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label25.Location = new System.Drawing.Point(20, 544);
+            this.label25.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label25.Location = new System.Drawing.Point(20, 506);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(305, 16);
+            this.label25.Size = new System.Drawing.Size(332, 18);
             this.label25.TabIndex = 24;
             this.label25.Text = "Частота вращения ведущего круга nв, об/мин";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label26.Location = new System.Drawing.Point(20, 520);
+            this.label26.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label26.Location = new System.Drawing.Point(20, 482);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(239, 16);
+            this.label26.Size = new System.Drawing.Size(263, 18);
             this.label26.TabIndex = 25;
             this.label26.Text = "Величина припуска на сторону z, мм";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label27.Location = new System.Drawing.Point(20, 569);
+            this.label27.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label27.Location = new System.Drawing.Point(20, 531);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(213, 16);
+            this.label27.Size = new System.Drawing.Size(237, 18);
             this.label27.TabIndex = 26;
             this.label27.Text = "Допуск на размер детали Td, мм";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label29.Location = new System.Drawing.Point(158, 737);
+            this.label29.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label29.Location = new System.Drawing.Point(155, 700);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(60, 16);
+            this.label29.Size = new System.Drawing.Size(69, 18);
             this.label29.TabIndex = 28;
             this.label29.Text = "Δогр, мм";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label30.Location = new System.Drawing.Point(158, 709);
+            this.label30.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label30.Location = new System.Drawing.Point(155, 672);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(54, 16);
+            this.label30.Size = new System.Drawing.Size(66, 18);
             this.label30.TabIndex = 29;
             this.label30.Text = "Δсф, мм";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label31.Location = new System.Drawing.Point(20, 678);
+            this.label31.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label31.Location = new System.Drawing.Point(18, 643);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(152, 16);
+            this.label31.Size = new System.Drawing.Size(173, 18);
             this.label31.TabIndex = 30;
             this.label31.Text = "Допускаемые значения:";
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label32.Location = new System.Drawing.Point(20, 737);
+            this.label32.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label32.Location = new System.Drawing.Point(17, 701);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(53, 16);
+            this.label32.Size = new System.Drawing.Size(62, 18);
             this.label32.TabIndex = 31;
             this.label32.Text = "Δкр, мм";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label33.Location = new System.Drawing.Point(20, 709);
+            this.label33.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label33.Location = new System.Drawing.Point(17, 672);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(54, 16);
+            this.label33.Size = new System.Drawing.Size(62, 18);
             this.label33.TabIndex = 32;
             this.label33.Text = "Ra, мкм";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label34.Location = new System.Drawing.Point(295, 708);
+            this.label34.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label34.Location = new System.Drawing.Point(299, 672);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(46, 16);
+            this.label34.Size = new System.Drawing.Size(55, 18);
             this.label34.TabIndex = 33;
             this.label34.Text = "Δв, мм";
             // 
             // count_button
             // 
             this.count_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.count_button.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.count_button.Location = new System.Drawing.Point(488, 783);
+            this.count_button.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.count_button.Location = new System.Drawing.Point(482, 749);
             this.count_button.Name = "count_button";
-            this.count_button.Size = new System.Drawing.Size(83, 32);
+            this.count_button.Size = new System.Drawing.Size(89, 32);
             this.count_button.TabIndex = 34;
             this.count_button.Text = "К расчету";
             this.count_button.UseVisualStyleBackColor = true;
@@ -428,8 +428,8 @@ namespace bescentovoe_shlifovanie
             // Exit_button
             // 
             this.Exit_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Exit_button.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.Exit_button.Location = new System.Drawing.Point(579, 783);
+            this.Exit_button.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Exit_button.Location = new System.Drawing.Point(579, 749);
             this.Exit_button.Name = "Exit_button";
             this.Exit_button.Size = new System.Drawing.Size(75, 32);
             this.Exit_button.TabIndex = 35;
@@ -439,212 +439,212 @@ namespace bescentovoe_shlifovanie
             // 
             // Dv_text
             // 
-            this.Dv_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Dv_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Dv_text.Location = new System.Drawing.Point(579, 59);
             this.Dv_text.Name = "Dv_text";
-            this.Dv_text.Size = new System.Drawing.Size(75, 24);
+            this.Dv_text.Size = new System.Drawing.Size(75, 23);
             this.Dv_text.TabIndex = 36;
             // 
             // Dsh_text
             // 
-            this.Dsh_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Dsh_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Dsh_text.Location = new System.Drawing.Point(579, 84);
             this.Dsh_text.Name = "Dsh_text";
-            this.Dsh_text.Size = new System.Drawing.Size(75, 24);
+            this.Dsh_text.Size = new System.Drawing.Size(75, 23);
             this.Dsh_text.TabIndex = 37;
             // 
             // d_text
             // 
-            this.d_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.d_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.d_text.Location = new System.Drawing.Point(579, 109);
             this.d_text.Name = "d_text";
-            this.d_text.Size = new System.Drawing.Size(75, 24);
+            this.d_text.Size = new System.Drawing.Size(75, 23);
             this.d_text.TabIndex = 38;
             // 
             // d3_text
             // 
-            this.d3_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.d3_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.d3_text.Location = new System.Drawing.Point(579, 134);
             this.d3_text.Name = "d3_text";
-            this.d3_text.Size = new System.Drawing.Size(75, 24);
+            this.d3_text.Size = new System.Drawing.Size(75, 23);
             this.d3_text.TabIndex = 39;
             // 
             // t_text
             // 
-            this.t_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.t_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.t_text.Location = new System.Drawing.Point(579, 159);
             this.t_text.Name = "t_text";
-            this.t_text.Size = new System.Drawing.Size(75, 24);
+            this.t_text.Size = new System.Drawing.Size(75, 23);
             this.t_text.TabIndex = 40;
             // 
             // f1_text
             // 
-            this.f1_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.f1_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.f1_text.Location = new System.Drawing.Point(579, 184);
             this.f1_text.Name = "f1_text";
-            this.f1_text.Size = new System.Drawing.Size(75, 24);
+            this.f1_text.Size = new System.Drawing.Size(75, 23);
             this.f1_text.TabIndex = 41;
             // 
             // f2_text
             // 
-            this.f2_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.f2_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.f2_text.Location = new System.Drawing.Point(579, 209);
             this.f2_text.Name = "f2_text";
-            this.f2_text.Size = new System.Drawing.Size(75, 24);
+            this.f2_text.Size = new System.Drawing.Size(75, 23);
             this.f2_text.TabIndex = 42;
             // 
             // d01_text
             // 
-            this.d01_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.d01_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.d01_text.Location = new System.Drawing.Point(57, 272);
             this.d01_text.Name = "d01_text";
-            this.d01_text.Size = new System.Drawing.Size(63, 24);
+            this.d01_text.Size = new System.Drawing.Size(63, 23);
             this.d01_text.TabIndex = 43;
             // 
             // d03_text
             // 
-            this.d03_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.d03_text.Location = new System.Drawing.Point(57, 301);
+            this.d03_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.d03_text.Location = new System.Drawing.Point(57, 297);
             this.d03_text.Name = "d03_text";
-            this.d03_text.Size = new System.Drawing.Size(63, 24);
+            this.d03_text.Size = new System.Drawing.Size(63, 23);
             this.d03_text.TabIndex = 44;
             // 
             // d02_text
             // 
-            this.d02_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.d02_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.d02_text.Location = new System.Drawing.Point(185, 272);
             this.d02_text.Name = "d02_text";
-            this.d02_text.Size = new System.Drawing.Size(59, 24);
+            this.d02_text.Size = new System.Drawing.Size(59, 23);
             this.d02_text.TabIndex = 45;
             // 
             // d04_text
             // 
-            this.d04_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.d04_text.Location = new System.Drawing.Point(185, 301);
+            this.d04_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.d04_text.Location = new System.Drawing.Point(185, 297);
             this.d04_text.Name = "d04_text";
-            this.d04_text.Size = new System.Drawing.Size(59, 24);
+            this.d04_text.Size = new System.Drawing.Size(59, 23);
             this.d04_text.TabIndex = 46;
             // 
             // z01_text
             // 
-            this.z01_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.z01_text.Location = new System.Drawing.Point(58, 368);
+            this.z01_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.z01_text.Location = new System.Drawing.Point(58, 350);
             this.z01_text.Name = "z01_text";
-            this.z01_text.Size = new System.Drawing.Size(62, 24);
+            this.z01_text.Size = new System.Drawing.Size(62, 23);
             this.z01_text.TabIndex = 47;
             // 
             // z03_text
             // 
-            this.z03_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.z03_text.Location = new System.Drawing.Point(58, 398);
+            this.z03_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.z03_text.Location = new System.Drawing.Point(58, 375);
             this.z03_text.Name = "z03_text";
-            this.z03_text.Size = new System.Drawing.Size(62, 24);
+            this.z03_text.Size = new System.Drawing.Size(62, 23);
             this.z03_text.TabIndex = 48;
             // 
             // z02_text
             // 
-            this.z02_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.z02_text.Location = new System.Drawing.Point(184, 368);
+            this.z02_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.z02_text.Location = new System.Drawing.Point(184, 350);
             this.z02_text.Name = "z02_text";
-            this.z02_text.Size = new System.Drawing.Size(60, 24);
+            this.z02_text.Size = new System.Drawing.Size(60, 23);
             this.z02_text.TabIndex = 49;
             // 
             // z04_text
             // 
-            this.z04_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.z04_text.Location = new System.Drawing.Point(184, 398);
+            this.z04_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.z04_text.Location = new System.Drawing.Point(184, 375);
             this.z04_text.Name = "z04_text";
-            this.z04_text.Size = new System.Drawing.Size(60, 24);
+            this.z04_text.Size = new System.Drawing.Size(60, 23);
             this.z04_text.TabIndex = 50;
             // 
             // k_text
             // 
-            this.k_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.k_text.Location = new System.Drawing.Point(579, 466);
+            this.k_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.k_text.Location = new System.Drawing.Point(579, 430);
             this.k_text.Name = "k_text";
-            this.k_text.Size = new System.Drawing.Size(75, 24);
+            this.k_text.Size = new System.Drawing.Size(75, 23);
             this.k_text.TabIndex = 52;
             // 
             // R3_text
             // 
-            this.R3_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.R3_text.Location = new System.Drawing.Point(579, 491);
+            this.R3_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.R3_text.Location = new System.Drawing.Point(579, 455);
             this.R3_text.Name = "R3_text";
-            this.R3_text.Size = new System.Drawing.Size(75, 24);
+            this.R3_text.Size = new System.Drawing.Size(75, 23);
             this.R3_text.TabIndex = 54;
             // 
             // z_text
             // 
-            this.z_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.z_text.Location = new System.Drawing.Point(579, 516);
+            this.z_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.z_text.Location = new System.Drawing.Point(579, 480);
             this.z_text.Name = "z_text";
-            this.z_text.Size = new System.Drawing.Size(75, 24);
+            this.z_text.Size = new System.Drawing.Size(75, 23);
             this.z_text.TabIndex = 55;
             // 
             // nv_text
             // 
-            this.nv_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nv_text.Location = new System.Drawing.Point(579, 541);
+            this.nv_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nv_text.Location = new System.Drawing.Point(579, 505);
             this.nv_text.Name = "nv_text";
-            this.nv_text.Size = new System.Drawing.Size(75, 24);
+            this.nv_text.Size = new System.Drawing.Size(75, 23);
             this.nv_text.TabIndex = 56;
             // 
             // Td_text
             // 
-            this.Td_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Td_text.Location = new System.Drawing.Point(579, 566);
+            this.Td_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Td_text.Location = new System.Drawing.Point(579, 530);
             this.Td_text.Name = "Td_text";
-            this.Td_text.Size = new System.Drawing.Size(75, 24);
+            this.Td_text.Size = new System.Drawing.Size(75, 23);
             this.Td_text.TabIndex = 57;
             // 
             // Ra_text
             // 
-            this.Ra_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Ra_text.Location = new System.Drawing.Point(80, 705);
+            this.Ra_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Ra_text.Location = new System.Drawing.Point(82, 670);
             this.Ra_text.Name = "Ra_text";
-            this.Ra_text.Size = new System.Drawing.Size(58, 24);
+            this.Ra_text.Size = new System.Drawing.Size(58, 23);
             this.Ra_text.TabIndex = 58;
             // 
             // delta_kr_text
             // 
-            this.delta_kr_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.delta_kr_text.Location = new System.Drawing.Point(80, 733);
+            this.delta_kr_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.delta_kr_text.Location = new System.Drawing.Point(82, 698);
             this.delta_kr_text.Name = "delta_kr_text";
-            this.delta_kr_text.Size = new System.Drawing.Size(58, 24);
+            this.delta_kr_text.Size = new System.Drawing.Size(58, 23);
             this.delta_kr_text.TabIndex = 59;
             // 
             // delta_sf_text
             // 
-            this.delta_sf_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.delta_sf_text.Location = new System.Drawing.Point(223, 704);
+            this.delta_sf_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.delta_sf_text.Location = new System.Drawing.Point(228, 669);
             this.delta_sf_text.Name = "delta_sf_text";
-            this.delta_sf_text.Size = new System.Drawing.Size(59, 24);
+            this.delta_sf_text.Size = new System.Drawing.Size(59, 23);
             this.delta_sf_text.TabIndex = 60;
             // 
             // delta_ogr_text
             // 
-            this.delta_ogr_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.delta_ogr_text.Location = new System.Drawing.Point(223, 733);
+            this.delta_ogr_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.delta_ogr_text.Location = new System.Drawing.Point(228, 698);
             this.delta_ogr_text.Name = "delta_ogr_text";
-            this.delta_ogr_text.Size = new System.Drawing.Size(59, 24);
+            this.delta_ogr_text.Size = new System.Drawing.Size(59, 23);
             this.delta_ogr_text.TabIndex = 61;
             // 
             // delta_v_text
             // 
-            this.delta_v_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.delta_v_text.Location = new System.Drawing.Point(352, 704);
+            this.delta_v_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.delta_v_text.Location = new System.Drawing.Point(364, 669);
             this.delta_v_text.Name = "delta_v_text";
-            this.delta_v_text.Size = new System.Drawing.Size(61, 24);
+            this.delta_v_text.Size = new System.Drawing.Size(61, 23);
             this.delta_v_text.TabIndex = 62;
             // 
             // how_2_use_linklabel
             // 
             this.how_2_use_linklabel.AutoSize = true;
             this.how_2_use_linklabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.how_2_use_linklabel.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.how_2_use_linklabel.Location = new System.Drawing.Point(18, 783);
+            this.how_2_use_linklabel.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.how_2_use_linklabel.Location = new System.Drawing.Point(18, 749);
             this.how_2_use_linklabel.Name = "how_2_use_linklabel";
-            this.how_2_use_linklabel.Size = new System.Drawing.Size(203, 16);
+            this.how_2_use_linklabel.Size = new System.Drawing.Size(225, 18);
             this.how_2_use_linklabel.TabIndex = 63;
             this.how_2_use_linklabel.TabStop = true;
             this.how_2_use_linklabel.Text = "Руководство по использованию";
@@ -653,10 +653,10 @@ namespace bescentovoe_shlifovanie
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label28.Location = new System.Drawing.Point(542, 297);
+            this.label28.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label28.Location = new System.Drawing.Point(524, 300);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(82, 16);
+            this.label28.Size = new System.Drawing.Size(92, 18);
             this.label28.TabIndex = 66;
             this.label28.Text = "Тип детали:";
             // 
@@ -664,10 +664,10 @@ namespace bescentovoe_shlifovanie
             // 
             this.sfera_radioButton.AutoSize = true;
             this.sfera_radioButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sfera_radioButton.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.sfera_radioButton.Location = new System.Drawing.Point(542, 346);
+            this.sfera_radioButton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sfera_radioButton.Location = new System.Drawing.Point(524, 349);
             this.sfera_radioButton.Name = "sfera_radioButton";
-            this.sfera_radioButton.Size = new System.Drawing.Size(103, 20);
+            this.sfera_radioButton.Size = new System.Drawing.Size(117, 22);
             this.sfera_radioButton.TabIndex = 65;
             this.sfera_radioButton.TabStop = true;
             this.sfera_radioButton.Text = "Сферическая";
@@ -677,10 +677,10 @@ namespace bescentovoe_shlifovanie
             // 
             this.cilinder_radioButton.AutoSize = true;
             this.cilinder_radioButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cilinder_radioButton.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.cilinder_radioButton.Location = new System.Drawing.Point(542, 321);
+            this.cilinder_radioButton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cilinder_radioButton.Location = new System.Drawing.Point(524, 324);
             this.cilinder_radioButton.Name = "cilinder_radioButton";
-            this.cilinder_radioButton.Size = new System.Drawing.Size(124, 20);
+            this.cilinder_radioButton.Size = new System.Drawing.Size(138, 22);
             this.cilinder_radioButton.TabIndex = 64;
             this.cilinder_radioButton.TabStop = true;
             this.cilinder_radioButton.Text = "Цилиндрическая";
@@ -688,110 +688,112 @@ namespace bescentovoe_shlifovanie
             // 
             // delta_rb_text
             // 
-            this.delta_rb_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.delta_rb_text.Location = new System.Drawing.Point(352, 733);
+            this.delta_rb_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.delta_rb_text.Location = new System.Drawing.Point(364, 698);
             this.delta_rb_text.Name = "delta_rb_text";
-            this.delta_rb_text.Size = new System.Drawing.Size(61, 24);
+            this.delta_rb_text.Size = new System.Drawing.Size(61, 23);
             this.delta_rb_text.TabIndex = 67;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label35.Location = new System.Drawing.Point(295, 736);
+            this.label35.BackColor = System.Drawing.SystemColors.Control;
+            this.label35.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label35.Location = new System.Drawing.Point(299, 701);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(53, 16);
+            this.label35.Size = new System.Drawing.Size(63, 18);
             this.label35.TabIndex = 68;
             this.label35.Text = "Δрб, мм";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(20, 444);
+            this.label20.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label20.Location = new System.Drawing.Point(20, 407);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(159, 16);
+            this.label20.Size = new System.Drawing.Size(173, 18);
             this.label20.TabIndex = 69;
             this.label20.Text = "Введите параметр l, мм";
             // 
             // l_text
             // 
-            this.l_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_text.Location = new System.Drawing.Point(579, 441);
+            this.l_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l_text.Location = new System.Drawing.Point(579, 405);
             this.l_text.Name = "l_text";
-            this.l_text.Size = new System.Drawing.Size(75, 24);
+            this.l_text.Size = new System.Drawing.Size(75, 23);
             this.l_text.TabIndex = 70;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label22.Location = new System.Drawing.Point(427, 706);
+            this.label22.BackColor = System.Drawing.SystemColors.Control;
+            this.label22.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label22.Location = new System.Drawing.Point(437, 671);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(67, 16);
+            this.label22.Size = new System.Drawing.Size(79, 18);
             this.label22.TabIndex = 71;
             this.label22.Text = "Δпрод, мм";
             // 
             // delta_prod_text
             // 
-            this.delta_prod_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.delta_prod_text.Location = new System.Drawing.Point(498, 702);
+            this.delta_prod_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.delta_prod_text.Location = new System.Drawing.Point(519, 669);
             this.delta_prod_text.Name = "delta_prod_text";
-            this.delta_prod_text.Size = new System.Drawing.Size(64, 24);
+            this.delta_prod_text.Size = new System.Drawing.Size(64, 23);
             this.delta_prod_text.TabIndex = 72;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label36.Location = new System.Drawing.Point(20, 595);
+            this.label36.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label36.Location = new System.Drawing.Point(20, 557);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(338, 16);
+            this.label36.Size = new System.Drawing.Size(369, 18);
             this.label36.TabIndex = 73;
             this.label36.Text = "Скорость вращения шлифовального круга Vкр, м/с ";
             // 
             // Vkr_text
             // 
-            this.Vkr_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Vkr_text.Location = new System.Drawing.Point(579, 591);
+            this.Vkr_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Vkr_text.Location = new System.Drawing.Point(579, 555);
             this.Vkr_text.Name = "Vkr_text";
-            this.Vkr_text.Size = new System.Drawing.Size(75, 24);
+            this.Vkr_text.Size = new System.Drawing.Size(75, 23);
             this.Vkr_text.TabIndex = 74;
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label37.Location = new System.Drawing.Point(20, 619);
+            this.label37.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label37.Location = new System.Drawing.Point(20, 581);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(240, 16);
+            this.label37.Size = new System.Drawing.Size(259, 18);
             this.label37.TabIndex = 75;
             this.label37.Text = "Скорость ведущего круга Vд, м/мин";
             // 
             // Vg_text
             // 
-            this.Vg_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Vg_text.Location = new System.Drawing.Point(579, 616);
+            this.Vg_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Vg_text.Location = new System.Drawing.Point(579, 580);
             this.Vg_text.Name = "Vg_text";
-            this.Vg_text.Size = new System.Drawing.Size(75, 24);
+            this.Vg_text.Size = new System.Drawing.Size(75, 23);
             this.Vg_text.TabIndex = 76;
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label38.Location = new System.Drawing.Point(20, 642);
+            this.label38.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label38.Location = new System.Drawing.Point(20, 604);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(146, 16);
+            this.label38.Size = new System.Drawing.Size(163, 18);
             this.label38.TabIndex = 77;
             this.label38.Text = "Ширина круга Вкр, мм";
             // 
             // Bkr_text
             // 
-            this.Bkr_text.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Bkr_text.Location = new System.Drawing.Point(579, 641);
+            this.Bkr_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Bkr_text.Location = new System.Drawing.Point(579, 605);
             this.Bkr_text.Name = "Bkr_text";
-            this.Bkr_text.Size = new System.Drawing.Size(75, 24);
+            this.Bkr_text.Size = new System.Drawing.Size(75, 23);
             this.Bkr_text.TabIndex = 78;
             // 
             // Form1

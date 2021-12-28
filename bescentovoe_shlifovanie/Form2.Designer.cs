@@ -36,7 +36,7 @@ namespace bescentovoe_shlifovanie
             // output_text
             // 
             this.output_text.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.output_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.output_text.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.output_text.Location = new System.Drawing.Point(8, 12);
             this.output_text.Multiline = true;
             this.output_text.Name = "output_text";
@@ -47,7 +47,7 @@ namespace bescentovoe_shlifovanie
             // exit_button
             // 
             this.exit_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exit_button.Font = new System.Drawing.Font("GOST type B", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.exit_button.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.exit_button.Location = new System.Drawing.Point(884, 539);
             this.exit_button.Name = "exit_button";
             this.exit_button.Size = new System.Drawing.Size(79, 38);
